@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Being Material Prototype</title>
+  <style>
+    body {
+      background: #999;
+      margin:20px;
+    }
+    img {
+      /*width:700px;*/
+      max-height: 95vh;
+      display: block;
+      /*margin: 0 auto;*/
+    }
+    #overlay {
+      position:absolute;
+      z-index:999;
+    }
+    #book {
+      position:absolute;
+      top:20px;
+      background: #fff;
+    }
+    #book img {
+      position: absolute;
+      mix-blend-mode: multiply;
+      box-shadow: 10px 30px 10px rgba(0,0,0,0.1);
+    }
+    #book img.for-size {
+      position: static;
+      opacity: 0;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    var w = $("#overlay").width();
+    var pw = $("body").width();
+
+    $(document).mousemove(function(e){
+      // $("#overlay").css({ left:e.pageX / 2 });
+      $("#book").css({ left:e.pageX / 2 });
+    });
+  </script>
+</head>
+<body>
+  <!-- <img src="overlay-b.png" id="overlay"> -->
+  <img src="prototype-0501-nt.png" id="overlay">
+  <div id="book">
+    <img src="prototype-0501-01.png">
+    <img src="prototype-0501-01.png" class="for-size">
+  </div>
+</body>
+</html>
