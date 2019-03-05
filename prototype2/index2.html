@@ -20,11 +20,16 @@
     #book {
       position:absolute;
       top:20px;
+      background: #fff;
     }
     #book img {
       position: absolute;
       mix-blend-mode: multiply;
       box-shadow: 10px 30px 10px rgba(0,0,0,0.1);
+    }
+    #book img.for-size {
+      position: static;
+      opacity: 0;
     }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -39,15 +44,16 @@
   </script>
 </head>
 <body>
-  <img src="overlay-b.png" id="overlay">
-  <img src="prototype-0502_7.png" id="overlay">
+  <!-- <img src="overlay-b.png" id="overlay"> -->
+  <img src="prototype-0601_1.png" id="overlay">
   <div id="book">
-    <img src="prototype-0102-1.png">
-    <img src="prototype-0102-2.png">
-    <img src="prototype-0102-3.png">
-    <img src="prototype-0102-4.png">
-    <img src="prototype-0102-5.png">
-    <img src="prototype-0102-6.png">
+    <img src="prototype-0601_1.png">
+    <img src="prototype-0601_2.png">
+    <img src="prototype-0601_3.png">
+    <img src="prototype-0601_4.png">
+    <img src="prototype-0601_5.png">
+    <img src="prototype-0601_6.png">
+    <img src="prototype-0601_1.png" class="for-size">
   </div>
 </body>
 </html>
