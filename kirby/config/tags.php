@@ -238,4 +238,45 @@ return [
         }
     ],
 
+
+        'plyr-video' => [
+            'attr' => [
+                'poster',
+                'url',
+                'title',
+                'caption'
+            ],
+
+            'html' => function($tag) {
+                return        
+                '<video poster="http://' . $tag->poster . '.jpg" id="player" playsinline controls>
+                    <source src="http://' . $tag->url. '.mp4" type="video/mp4" />
+                    <source src="http://' . $tag->url. '.webm" type="video/webm" />
+                </video>
+                <figcaption><span>'. $tag->title .'</span><span>'. $tag->caption .'</span></figcaption>';
+            }
+        ],
+
+        'plyr-audio' => [
+            'attr' => [
+                'url',
+                'title',
+                'caption'
+            ],
+
+            'html' => function($tag) {
+                return        
+                '<audio id="player" controls>
+                    <source src="http://' . $tag->url. '.mp3" type="audio/mp3" />
+                    <source src="http://' . $tag->url . '.ogg" type="audio/ogg" />
+                </audio>
+                <figcaption><span>'. $tag->title .'</span><span>'. $tag->caption .'</span></figcaption>';
+            }
+        ],
+       
+
+
+
+
+
 ];

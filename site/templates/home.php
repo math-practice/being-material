@@ -1,31 +1,16 @@
 <?php snippet('header') ?>
 
 <main>
-  <header class="intro">
-    <h1><?= $site->title() ?></h1>
-  </header>
+  <div class="intro">
+    <div class="col-2"></div>
+    <div class="col-2">
+        <h3> Edited by  Marie-Pier Boucher,  Stefan Helmreich,  Leila W. Kinney,  Skylar Tibbits,  Rebecca Uchill, and  Evan Ziporyn</h3>
+    </div>
+    <!-- <div id="gallery">
+      <div></div>
+      <div></div>
 
-  <?php if ($photographyPage = page('photography')): ?>
-  <ul class="grid">
-    <?php foreach ($photographyPage->children()->listed() as $album): ?>
-    <li>
-      <a href="<?= $album->url() ?>">
-        <figure>
-          <?php if ($cover = $album->cover()): ?>
-          <?= $cover->resize(1024, 1024) ?>
-          <?php endif ?>
-          <figcaption>
-            <span>
-              <span class="example-name"><?= $album->title() ?></span>
-            </span>
-          </figcaption>
-        </figure>
-      </a>
-    </li>
-    <?php endforeach ?>
-  </ul>
-  <?php endif ?>
-
+    </div> -->
+  </div>
 </main>
-
 <?php snippet('footer') ?>

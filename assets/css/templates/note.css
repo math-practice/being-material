@@ -1,9 +1,25 @@
+
+body {
+  background-color: white;
+  color:black;
+}
+path.fill {
+  fill:#000;
+}
+.header {
+    background-color:white;
+}
+
+.button {
+    border: solid 1px black;
+  }
+
 .note {
   max-width: 35rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .note-header {
-  text-align: center;
+  text-align: left;
 }
 .note-date {
   margin-bottom: .5rem;
@@ -31,3 +47,108 @@
     margin-right: -3rem;
   }
 }
+
+
+  /*--------------------------------------------------------------
+    # Plyr
+    --------------------------------------------------------------*/
+/* global */
+
+.plyr {
+  font-family:'mg-semi-mono', monospace;
+}
+
+.plyr__poster {
+  background-size:cover;
+}
+.plyr__tooltip {
+  color: black;
+}
+.plyr__tooltip::before {
+  border:0;
+}
+
+.plyr__control { border-radius: 0;}
+.plyr__control--overlaid {border-radius: 50%;}
+.plyr__menu__container .plyr__control {font-size: .4rem;}
+.plyr__menu__container::after {border:none;} /*remove arrow tail*/
+.plyr__progress__buffer { /*progress bar*/
+  color:#828282;
+  /* background: #828282; */
+}
+.plyr--full-ui input[type=range] {
+  border-radius: 0;
+}
+.plyr__menu__container, .plyr__tooltip {
+  border-radius: 0; 
+  box-shadow:none;
+  color:black;
+  font-size: .4rem;
+  border: solid 1px black;
+  background:white;
+}
+.plyr__menu__container .plyr__control, .plyr__menu__container .plyr__control--back::before {
+  color:black;
+}
+.plyr__menu__container .plyr__control--forward::after {
+  border-left-color: black;
+}
+.plyr__menu__container .plyr__control--back::after{
+  border-right-color:black;
+}
+.plyr__menu__container .plyr__control[role=menuitemradio]::before{
+    border: solid 1px black;
+  background:white; 
+}
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+  background: black;
+}
+.plyr__menu__container .plyr__control--back::before {
+  background: black;
+}
+/* video */
+
+  .plyr--video.plyr--stopped .plyr__controls {  /*hide control pannel before play, until hovering */
+    /* display: none  */
+  }
+
+    .plyr--full-ui.plyr--video .plyr__control--overlaid {
+        transform: scale(2);
+        transform-origin: bottom right;
+    }
+    .plyr--full-ui input[type=range] {
+
+      color: black;
+    }
+  
+    .plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {
+      background:black;
+    }
+  
+    .plyr__control.plyr__tab-focus {
+      box-shadow: none;
+    }
+
+    .plyr__control--overlaid {
+      background: white;
+      color:black;
+      /* padding: 25px; */
+    }
+
+    .plyr--video .plyr__control.plyr__tab-focus, .plyr--video  .plyr--video .plyr__control[aria-expanded=true] {
+      color: black;
+    }
+
+    .plyr__control:hover {
+      color:white;
+    }
+/* audio */
+    .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true] {
+      background:black;
+    }
+
+    .plyr--audio .plyr__controls {
+      border: solid 1px; 
+      color: black;
+    }
+

@@ -1,6 +1,6 @@
 type: pages
-headline: Photography
-parent: kirby.page("photography")
+headline: Artworks
+parent: kirby.page("artworks")
 size: tiny
 info: "{{ page.images.count }} image(s)"
 layout: cards

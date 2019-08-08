@@ -11,15 +11,29 @@ Text:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non augue sit amet quam rutrum pulvinar. Etiam vel libero et lectus vestibulum euismod. Curabitur non dictum est. Mauris sollicitudin elit at lorem viverra semper. Nunc convallis, nibh et blandit tempor, arcu nisl scelerisque lectus, a tristique nibh sem at dui. Aliquam luctus quis nibh sed ornare. Ut eu nisi orci.
 
 
-{{ gallery }}
+(plyr-audio: 
+	url: www.w3schools.com/tags/horse
+	title: work title
+	caption: work caption
+)
 
+(plyr-video: 
+	url: www.w3schools.com/tags/movie 
+	poster: i.ytimg.com/vi/jpsGLsaZKS0/maxresdefault
+	title: work title with no caption
+)
 
 ----
 
-Gallery:
+Link:
 
-- photography/lucy-mcrae
+https://www.youtube.com/watch?v=kGKh43OjLU4
 
 ----
+
+
 
 Category: Wearable
+
+----
+ 

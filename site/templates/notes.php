@@ -4,14 +4,12 @@
   <header class="intro">
     <h1><?= $page->title() ?></h1>
   </header>
-
   <div class="notes">
-    <?php foreach ($page->children()->listed()->sortBy('date', 'desc') as $note): ?>
+    <?php foreach ($notepage->children()->listed()->sortBy('date', 'desc') as $alubum): ?>
     <article class="note">
       <header class="note-header">
-        <a href="<?= $note->url() ?>">
-          <h2><?= $note->title() ?></h2>
-          <time><?= $note->date()->toDate('d F Y') ?></time>
+        <a href="<?= $alubum->url() ?>">
+          <h2><?= $alubum->title() ?></h2>
         </a>
       </header>
     </article>

@@ -25,13 +25,13 @@ columns:
       meta:
         type: fields
         fields:
-          date:
-            type: date
-            time: true
-            default: now
-          author:
-            type: users
-          tags: true
+          # date:
+          #   type: date
+          #   time: false
+          #   default: now
+          # author:
+          #   type: users
+          tags: false
           gallery:
             type: pages
             query: kirby.page("photography").children

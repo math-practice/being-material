@@ -1,0 +1,7 @@
+type: pages
+headline: Livable
+parent: kirby.page("livable")
+info: "{{ page.date.toDate('d.m.Y') }}"
+template: note
+empty: No notes yet
+sortBy: date desc
