@@ -8,7 +8,7 @@ Text:
 
 (plyr-video: 
 	url:7nvDwnolr3M
-	title: <i>Institute of Isolation</i><Br> 2016
+	title: <i> Yarn-dez-vous</i><Br> 2014
 	caption: Research and conceptual contributions: Lillian Harden, Regina Möller, Karina Silvester<br>
 Production: Lillian Harden, Karina Silvester [prototype development]; Andy Boit, Emma Harden, Elliot McLaughlin, Emily Tow [sewing]; Seth Avecilla, Bjorn Eric Sparrman [installation]; Gedney H. Barclay, Sooyoung Kwon [project videos]<br>
 Participants and textile donations: Ahmed Mater, Arwa Alneami, Arthur Tres, Katrina Weber Ashour, Matthew Mazzotta, Regina Möller, Ziad El Sayed
