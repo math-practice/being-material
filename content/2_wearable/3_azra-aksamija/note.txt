@@ -9,14 +9,9 @@ Text:
 (plyr-video: 
 	url:7nvDwnolr3M
 	title: <i>Institute of Isolation</i><Br> 2016
-	caption: A Lucy McRae film commissioned by Ars Electronica, Linz [co-commissioning agent], Austria, est. 1996, and Sparks, Brussels [co-commissioning agent], Belgium, est. 2015<br><br>
-	Co-writer and cinematographer: Lotje Sodderland<br>
-	Co-producer: Claudia Schnugg<br>
-	Microgravity trainer fabricator: Daniel Gower<br>
-	Editor: Domenico Favata<br>
-	Soundtrack: Bizarre Rituals, United Kingdom<br><br>
-	This film was made possible by the generous support and dynamic collaborations of Ricardo Bofill and La Fábrica, Juan Enriquez, Rombaut, Mark Ruffs, Janneke Verhoeven, Prof. Emmanuele A. Jannini, Brad Sanderson, Dr Steve Dorney, GSK Human Performance Lab, and Royal Botanic Gardens Kew.<br><br>
-	Collection of the Museum of Applied Arts & Sciences
+	caption: Research and conceptual contributions: Lillian Harden, Regina Möller, Karina Silvester<br>
+Production: Lillian Harden, Karina Silvester [prototype development]; Andy Boit, Emma Harden, Elliot McLaughlin, Emily Tow [sewing]; Seth Avecilla, Bjorn Eric Sparrman [installation]; Gedney H. Barclay, Sooyoung Kwon [project videos]<br>
+Participants and textile donations: Ahmed Mater, Arwa Alneami, Arthur Tres, Katrina Weber Ashour, Matthew Mazzotta, Regina Möller, Ziad El Sayed
 )
 
 
