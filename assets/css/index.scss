@@ -132,6 +132,12 @@
       border-top: solid 1px $grey;
     }
   
+    .list span {
+      display:inline-block;
+    }
+    .indent {
+      text-indent: $p-l;
+    }
   
   /*--------------------------------------------------------------
     # Structure
@@ -249,7 +255,7 @@
       border-radius: 30px;
       width: 70px;
       height: 60px;
-      @include mobile { display:block; }
+      @include mobile { display:block;}
       @include tablet { display:block; }
       @include desktop { display: none; }
     } 
@@ -282,15 +288,26 @@
       @include desktop { transform: translateY(0); }
       }
 
+      $header-height:110px;
 
     /* header: on scroll*/
     .scroll .header, #scroll-fix .header{ 
-      height:100px; 
+      height:$header-height; 
       max-width: $container-width-l;
       margin: 0 auto;
       @include mobile { height:90px; }
       @include tablet { height:90px; }
     }
+    .border-box {
+      height:1px; 
+      width:100%; 
+      background-color: black; 
+      position: absolute; 
+      top: $header-height; 
+      @include mobile { top:90px; }
+      @include tablet { top:90px; }
+    }
+
 
     #scroll-fix.no-scroll .header {
       position:relative;

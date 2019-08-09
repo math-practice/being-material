@@ -11,12 +11,15 @@ path.fill {
 }
 
 .scroll .header, #scroll-fix.scroll .header { position: absolute;}
-.scroll .header, #scroll-fix .header{ border-bottom: solid 1px black; }
-
+#btn-camera {position: absolute;}
+/* .scroll .header, #scroll-fix .header{ border-bottom: solid 1px black; } */
 .button {
     border: solid 1px black;
   }
 
+.col-2:first-child {
+  font-size:0.6rem;
+}
 .note {
   max-width: 35rem;
   /* margin: 0 auto; */

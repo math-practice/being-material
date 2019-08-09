@@ -124,6 +124,14 @@ h4, figcaption {
   border-top: solid 1px #828282;
 }
 
+.list span {
+  display: inline-block;
+}
+
+.indent {
+  text-indent: 1rem;
+}
+
 /*--------------------------------------------------------------
   # Structure
   --------------------------------------------------------------*/
@@ -326,7 +334,7 @@ body.slide {
 
 /* header: on scroll*/
 .scroll .header, #scroll-fix .header {
-  height: 100px;
+  height: 110px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -338,6 +346,24 @@ body.slide {
 @media (min-width: 768px) and (max-width: 1023px) {
   .scroll .header, #scroll-fix .header {
     height: 90px;
+  }
+}
+
+.border-box {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  top: 110px;
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .border-box {
+    top: 90px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .border-box {
+    top: 90px;
   }
 }
 

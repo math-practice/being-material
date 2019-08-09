@@ -1,5 +1,4 @@
-
-  </div>
+ </div>
 </div>
   <footer data-step='2' class='step' >
     <div class="wrapper">
@@ -8,7 +7,12 @@
             <span class="list-title"><?= $notePage->title() ?></span>
             <ul class="list">
               <?php foreach ($notePage->children()->listed() as $album): ?>
-                <li><a href="<?= $album->url() ?>"><?= $album->title() ?></a></li>
+                <li>
+                  <a href="<?= $album->url() ?>">
+                   <span><?= $album->subtitle() ?></span><br>
+                   <span class="indent"><?= $album->title() ?></span>
+                  </a>
+                </li>
               <?php endforeach ?>
             </ul>
       <?php endif ?>
@@ -16,7 +20,12 @@
             <span class="list-title"><?= $notePage->title() ?></span>
             <ul class="list">
               <?php foreach ($notePage->children()->listed() as $album): ?>
-                <li><a href="<?= $album->url() ?>"><?= $album->title() ?></a></li>
+              <li>
+                <a href="<?= $album->url() ?>">
+                  <span><?= $album->subtitle() ?></span><br>
+                  <span class="indent"><?= $album->title() ?></span>
+                </a>
+              </li>
               <?php endforeach ?>
             </ul>
       <?php endif ?>
@@ -24,7 +33,12 @@
             <span class="list-title"><?= $notePage->title() ?></span>
             <ul class="list">
               <?php foreach ($notePage->children()->listed() as $album): ?>
-                <li><a href="<?= $album->url() ?>"><?= $album->title() ?></a></li>
+              <li>
+                  <a href="<?= $album->url() ?>">
+                   <span><?= $album->subtitle() ?></span><br>
+                   <span class="indent"><?= $album->title() ?></span>
+                  </a>
+                </li>              
               <?php endforeach ?>
             </ul>
       <?php endif ?>
@@ -32,8 +46,13 @@
             <span class="list-title"><?= $notePage->title() ?></span>
             <ul class="list">
               <?php foreach ($notePage->children()->listed() as $album): ?>
-                <li><a href="<?= $album->url() ?>"><?= $album->title() ?></a></li>
-              <?php endforeach ?>
+              <li>
+                  <a href="<?= $album->url() ?>">
+                   <span><?= $album->subtitle() ?></span><br>
+                   <span class="indent"><?= $album->title() ?></span>
+                  </a>
+                </li>              
+                <?php endforeach ?>
             </ul>
       <?php endif ?>
       <div class="credit col-2">

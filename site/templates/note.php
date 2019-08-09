@@ -2,9 +2,9 @@
 <main>
   <article class="note">
     <header class="note-header"> 
-      <h1>
-        <?= $page->subtitle() ?><br>
-        <?= $page->title() ?>
+      <h1 class="list">
+        <span><?= $page->subtitle() ?></span><br>
+        <span class="indent"><?= $page->title() ?></span>
       </h1>
     </header>
     <div class="note-text text">
