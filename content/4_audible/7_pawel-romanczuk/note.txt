@@ -1,0 +1,22 @@
+Title: Paweł Romańczuk
+
+----
+
+Subtitle: 
+
+----
+
+Text:
+
+(plyr-audio: 
+	url:https://mcdn.podbean.com/mf/player-preload/i36sks/MITP_Lin
+	title: <i>Tuoni piccoli della meccanica progressiva</i> 
+	caption: Mixed and recorded by Paweł Romańczuk, 2017
+)
+
+
+----
+
+Category: Audible
+
+----

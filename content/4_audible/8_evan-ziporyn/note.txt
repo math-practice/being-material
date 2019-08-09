@@ -1,0 +1,23 @@
+Title: Evan Ziporyn
+
+----
+
+Subtitle: 
+
+----
+
+Text:
+
+(plyr-audio: 
+	url:https://mcdn.podbean.com/mf/player-preload/i36sks/MITP_Lin
+	title: <i>Gymnopédie Z</i> 
+	caption: By Erik Satie, arr. <br>Evan Ziporyn, Airplane Ears Music [ASCAP], live performance by Ambient Orchestra, Evan Ziporyn, director, with Brendan Landis, guitar.
+
+)
+
+
+----
+
+Category: Audible
+
+----

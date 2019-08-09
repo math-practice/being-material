@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title><?= $site->title() ?> | <?= $page->title() ?></title>
-  <?= css(['assets/css/index.css']) ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <?= css(['assets/css/index.css']) ?>
   <link rel='stylesheet' href='https://unpkg.com/plyr@3/dist/plyr.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <?= css(['@auto']) ?>
@@ -41,5 +41,5 @@
       </svg>
     </a>
   </header>
-  <div class="page">
+  <div class="page" class='step'  data-step='1'>
 

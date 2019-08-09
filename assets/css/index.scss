@@ -37,6 +37,8 @@
       @content;
     }
   }
+
+  
   
   $white: #fff;
   $grey: #828282;
@@ -44,6 +46,12 @@
   $p-m: .5rem;
   $p-l: 1rem;
   $container-width-l: 900px;
+
+  $h1: 2rem;
+  $h2: 1.5rem;
+  $body: 1rem;
+  $h3: .6rem;
+  $h4: .45rem;
 
   :root {
     --content-width: 100vw;
@@ -63,7 +71,7 @@
   li { list-style: none;}
   
   img { width: 100%;}
-  
+  iframe { border:0; }
   
   /*--------------------------------------------------------------
     # Typography
@@ -82,24 +90,29 @@
     
     h1 {
       font-family:'mg-semi-mono', monospace;
-      font-size: 2rem;
+      font-size: $h1;
       font-weight: normal;
+      @include mobile { font-size: 1.3rem;}
+      @include tablet { font-size: $h2;}
     }
+
+  
     h3 {
       font-family:'mg-semi-mono', monospace;
-      font-size: .5rem;
+      font-size: $h3;
       font-weight: normal;
     }
     
     h4, figcaption {
-      font-size: .5rem;
+      font-size: $h4;
     }
 
     .list-title {
+      font-family:'mg-semi-mono', monospace;
       display:block;
       color:$grey;
       text-transform: uppercase;
-      font-size: .5rem;
+      font-size: $h4;
       padding: $p-l 0 $p-m 0;
     }
     
@@ -177,18 +190,9 @@
     .intro {
       padding: $p-m 0;
       min-height:500px;
+      display: flex;
     }
 
-    .col-2 {
-      position: relative;
-      padding:$p-m;
-      text-align: left;
-      z-index:10;
-      flex: 0 0 50%;
-      max-width: 50%;
-      width: 100%;
-      float: left;      
-    }
 
     /*header-logo*/
     svg:not(:root)  { width:100%;}
@@ -219,7 +223,7 @@
     }
     #logo-1 { 
       width: 230px;
-      @include mobile { width: 215px; float: none;}
+      @include mobile { width: 230px; float: none;}
       @include tablet { width: 230px; float:none;}
 
     }
@@ -277,7 +281,7 @@
       max-width: $container-width-l;
       margin: 0 auto;
       @include mobile { height:90px; }
-      @include tablet { height:120px; }
+      @include tablet { height:90px; }
     }
 
     #scroll-fix.no-scroll .header {
@@ -289,10 +293,7 @@
       position:fixed;
     }
 
-    .scroll .header, #scroll-fix .header { 
-      @include mobile { height:90px; }
-      @include tablet { height:120px; }
-    }
+ 
 
     .scroll #header-logo, #scroll-fix #header-logo { 
       transform: scale(.5); 
@@ -315,20 +316,50 @@
       margin: 0 auto;
     }
   
-    figcaption {
-      padding: 0.3rem 0 1rem 0;
-    }
 
-    figcaption span {
-      display: block;
-    }
+      .note-header h1 {
+        position:fixed;
+        top:0;
+        z-index:100000;
+        padding-right:$p-m;
+        // margin-bottom: 0rem;
+        // font-size:1.5rem;
+        // z-index: 1;
+        text-align:right;
+      }
 
-  .intro h1 {
-    position: relative;
-    margin-bottom: 0rem;
-    font-size:1rem;
-    z-index: 1;
-  }
+      // .scroll .note-header h1 {
+      //   position: fixed;
+      //   text-align:right;
+      // }
+
+      /*column layout*/
+      .col-2 {
+        position: relative;
+        padding:0 $p-m;
+        text-align: left;
+        z-index:10;
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 100%;
+        float: left;      
+      }
+  
+      .col-2:nth-child(even) {
+        padding-right:0;
+      }
+      .col-2:nth-child(odd) {
+        padding-left:0;
+      }
+  
+      .column-2 {
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+      }
   
   .tags {
     text-align: left;
@@ -349,7 +380,7 @@
     margin-bottom: 1.5em;
   }
   .text h2 {
-    font-size: 1.5rem;
+    font-size: $h2;
     font-weight: 700;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
@@ -373,7 +404,16 @@
   .text img {
     width: 100%;
   }
-  
+
+  figcaption {
+    padding: 0.5rem 0 1rem 0;
+    display:flex;
+  }
+
+ .text figcaption p {
+   margin-bottom: .3rem;
+  }
+
 
   /*media*/
 
@@ -427,7 +467,7 @@
   
   footer .credit {
     padding: $p-l $p-l $p-l 0;
-    font-size:.5rem;
+    font-size: $h4;
     text-align:left;
     margin: 0 auto;
     line-height: 1.2em;

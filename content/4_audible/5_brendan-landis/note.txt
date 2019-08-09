@@ -1,0 +1,22 @@
+Title: Brendan Landis
+
+----
+
+Subtitle: 
+
+----
+
+Text:
+
+(plyr-audio: 
+	url:https://mcdn.podbean.com/mf/player-preload/i36sks/MITP_Lin
+	title: <i>Every Recording of Gymnopédie 1</i><br>New York City, 2016
+	caption: Composed by Erik Satie. Concept and assembly by Brendan Landis.
+)
+
+
+----
+
+Category: Audible
+
+----

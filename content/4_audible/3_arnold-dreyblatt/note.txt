@@ -1,0 +1,22 @@
+Title: Arnold Dreyblatt
+
+----
+
+Subtitle: 
+
+----
+
+Text:
+
+(plyr-audio: 
+	url:https://mcdn.podbean.com/mf/player-preload/i36sks/MITP_Lin
+	title: <i>Magnetom</i> 
+	caption: Live recording by Arnold Drebylatt
+)
+
+
+----
+
+Category: Audible
+
+----

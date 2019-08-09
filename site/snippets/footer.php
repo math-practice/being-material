@@ -1,9 +1,17 @@
 
   </div>
 </div>
-  <footer>
+  <footer data-step='2' class='step' >
     <div class="wrapper">
       <!--artist list-->
+      <?php if ($notePage = page('programmable')): ?>
+            <span class="list-title"><?= $notePage->title() ?></span>
+            <ul class="list">
+              <?php foreach ($notePage->children()->listed() as $album): ?>
+                <li><a href="<?= $album->url() ?>"><?= $album->title() ?></a></li>
+              <?php endforeach ?>
+            </ul>
+      <?php endif ?>
       <?php if ($notePage = page('wearable')): ?>
             <span class="list-title"><?= $notePage->title() ?></span>
             <ul class="list">
@@ -43,6 +51,7 @@
 <script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL'></script>
 <script src='https://unpkg.com/plyr@3'></script>
 <script src="<?= $site->url() ?>/assets/js/script.js"></script>  
+<script src="<?= $site->url() ?>/assets/js/scrollama.js"></script>
 <script>
 //https://github.com/sampotts/plyr/#initialising
 // const players = Plyr.setup('.js-player');

@@ -153,6 +153,7 @@ return [
             'target',
             'title',
             'text',
+            'caption'
         ],
         'html' => function ($tag) {
             if (empty($tag->lang) === false) {
@@ -241,19 +242,24 @@ return [
 
         'plyr-video' => [
             'attr' => [
-                'poster',
+            
                 'url',
                 'title',
                 'caption'
             ],
 
             'html' => function($tag) {
-                return        
-                '<video poster="http://' . $tag->poster . '.jpg" id="player" playsinline controls>
-                    <source src="http://' . $tag->url. '.mp4" type="video/mp4" />
-                    <source src="http://' . $tag->url. '.webm" type="video/webm" />
-                </video>
-                <figcaption><span>'. $tag->title .'</span><span>'. $tag->caption .'</span></figcaption>';
+                return    
+                // movie file embed    
+                // '<video id="player" playsinline controls>
+                //     <source src="http://beingmaterial.mit.edu/'. $tag->url. '.mp4" type="video/mp4" />
+                //     <source src="http://beingmaterial.mit.edu/' . $tag->url. '.webm" type="video/webm" />
+                // </video>
+                // <figcaption><p>'. $tag->title .'</p><p class="column-2">'. $tag->caption .'</p></figcaption>';
+                
+                //youtube embedfor dummy
+                '<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="'. $tag->url. '"></div>
+                <figcaption><p class="col-2">'. $tag->title .'</p><p class="col-2">'. $tag->caption .'</p></figcaption>';
             }
         ],
 
@@ -267,13 +273,46 @@ return [
             'html' => function($tag) {
                 return        
                 '<audio id="player" controls>
-                    <source src="http://' . $tag->url. '.mp3" type="audio/mp3" />
-                    <source src="http://' . $tag->url . '.ogg" type="audio/ogg" />
+                    <source src="'. $tag->url . '.mp3" type="audio/mp3" />
+                    <source src="'. $tag->url . '.ogg" type="audio/ogg" />
                 </audio>
-                <figcaption><span>'. $tag->title .'</span><span>'. $tag->caption .'</span></figcaption>';
+                <figcaption><p class="col-2">'. $tag->title .'</p><p class="col-2">'. $tag->caption .'</p></figcaption>';
             }
         ],
-       
+
+        /* code */
+
+        'code' => [
+            'attr' => [
+                'url',
+                'title',
+                'caption'
+            ],
+
+            'html' => function($tag) {
+                return        
+                '<iframe ' . 'src="' . $tag->url . '"></iframe> 
+                <figcaption><p class="col-2">'. $tag->title .'</p><p class="col-2">'. $tag->caption .'</p></figcaption>';
+            }
+        ],
+
+        /* image */
+
+        'img' => [
+            'attr' => [
+                'url',
+                'title',
+                'caption'
+        
+            ],
+
+            'html' => function($tag) {
+                return        
+                '<img alt=""'.'src="' . $tag->url . '">
+                <figcaption><p class="col-2">'. $tag->title .'</p><p class="col-2">'. $tag->caption .'</p></figcaption>';
+
+            }
+        ],
 
 
 
