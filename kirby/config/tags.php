@@ -282,7 +282,7 @@ return [
 
         /* code */
 
-        'code' => [
+        'iframe' => [
             'attr' => [
                 'url',
                 'title',
@@ -291,10 +291,26 @@ return [
 
             'html' => function($tag) {
                 return        
-                '<iframe ' . 'src="' . $tag->url . '"></iframe> 
+                '<iframe ' . 'src="' . $tag->url . '"style="width: 100%; min-height: 400px; overflow: hidden;" scrolling="no" frameborder="0"></iframe> 
                 <figcaption><p class="col-2">'. $tag->title .'</p><p class="col-2">'. $tag->caption .'</p></figcaption>';
             }
         ],
+
+        /*html*/
+
+        // 'code' => [
+        //     'attr' => [
+        //         'url',
+        //         'title',
+        //         'caption'
+        //     ],
+
+        //     'html' => function($tag) {
+        //         return        
+        //         '<iframe ' . 'src="' . $tag->url . '"></iframe> 
+        //         <pre><code class="plaintext">...</code></pre>'           
+        //     }
+        // ],
 
         /* image */
 

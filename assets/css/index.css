@@ -61,11 +61,16 @@ iframe {
   --------------------------------------------------------------*/
 html {
   font-family: "mg-r", san-serif;
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 .mono {
   font-family: "mg-semi-mono", monospace;
+}
+
+code, kbd, pre, samp {
+  font-family: "mg-semi-mono", monospace;
+  font-size: 0.6rem;
 }
 
 a {

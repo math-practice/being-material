@@ -8,11 +8,12 @@ Subtitle: Code as Material
 
 Text:
 
-(code: 
+(iframe: 
 	url: https://editor.p5js.org/undefined/embed/4vnFkM4g9
 	title: 
 	caption: The code examples in the book create static images, but on a screen the code can respond to you. Press and move your finger [or click the mouse] and the circles will follow. This code was ported from an original Processing example from 2003 to work through a current web browser with p5.js, another platform created by the Processing Foundation.
 )
+
 
 ```php
 let eyes = [];
