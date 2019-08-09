@@ -62,6 +62,12 @@ path.fill {
       font-size:.45rem;
       padding: .5rem;
   }
+  .hljs-title, .hljs-section {
+    color: #40AF49;
+  }
+  .hljs-type, .hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion{
+    color: #40AF49;
+  }
   /*--------------------------------------------------------------
     # Plyr
     --------------------------------------------------------------*/

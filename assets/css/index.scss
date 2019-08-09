@@ -100,6 +100,7 @@
       font-family:'mg-semi-mono', monospace;
       font-size: $h1;
       font-weight: normal;
+      line-height: 1;
       @include mobile { font-size: $body;}
       @include tablet { font-size: $body;}
     }
@@ -130,6 +131,7 @@
       padding:.5rem 0;
       border-top:none;
       border-bottom: solid 1px $grey;
+      font-size:.9rem;
     }
     
     .list li:first-child {
@@ -389,14 +391,8 @@
       @include mobile { padding:0; }
       @include tablet { padding:0;}
     }
-
-    .column-2 {
-      -moz-column-count: 2;
-      -moz-column-gap: 20px;
-      -webkit-column-count: 2;
-      -webkit-column-gap: 20px;
-      column-count: 2;
-      column-gap: 20px;
+    .credit.col-2 {
+      padding: $p-l 0;
     }
 
     .header-credit {
