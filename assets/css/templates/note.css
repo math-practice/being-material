@@ -10,6 +10,8 @@ path.fill {
     background-color:white;
 }
 
+.scroll .header, #scroll-fix.scroll .header
+{ position: absolute;}
 .button {
     border: solid 1px black;
   }
@@ -84,8 +86,8 @@ path.fill {
   box-shadow:none;
   color:black;
   font-size: .4rem;
-  border: solid 1px black;
-  background:white;
+  border: solid 1px rgb(209, 214, 220);
+  background: #f0f1f1;
 }
 .plyr__menu__container .plyr__control, .plyr__menu__container .plyr__control--back::before {
   color:black;
@@ -98,7 +100,8 @@ path.fill {
 }
 .plyr__menu__container .plyr__control[role=menuitemradio]::before{
     border: solid 1px black;
-  background:white; 
+  /* background:white;  */
+  background: #f0f1f1;
 }
 .plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
   background: black;
@@ -130,7 +133,8 @@ path.fill {
     }
 
     .plyr__control--overlaid {
-      background: white;
+      /* background: white; */
+      background: #f0f1f1;
       color:black;
       /* padding: 25px; */
     }
@@ -140,15 +144,17 @@ path.fill {
     }
 
     .plyr__control:hover {
-      color:white;
+      /* color:white; */
+      background: #f0f1f1;
     }
-/* audio */
+  /* audio */
+
     .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true] {
       background:black;
     }
 
     .plyr--audio .plyr__controls {
-      border: solid 1px; 
+      background: #f0f1f1;
       color: black;
     }
 

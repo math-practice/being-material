@@ -40,6 +40,14 @@ iframe {
   border: 0;
 }
 
+.pt-m {
+  padding-top: 0.5rem;
+}
+
+.pb-m {
+  padding-bottom: 0.5rem;
+}
+
 /*--------------------------------------------------------------
   # Typography
   --------------------------------------------------------------*/
@@ -63,17 +71,17 @@ strong, b {
 
 h1 {
   font-family: "mg-semi-mono", monospace;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: normal;
 }
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 767px) {
   h1 {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -85,6 +93,7 @@ h3 {
 
 h4, figcaption {
   font-size: 0.45rem;
+  font-weight: normal;
 }
 
 .list-title {
@@ -112,7 +121,7 @@ h4, figcaption {
   --------------------------------------------------------------*/
 .wrapper {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 700px;
 }
 
 footer .wrapper {
@@ -134,7 +143,7 @@ footer .wrapper {
   box-sizing: border-box;
   transition: all 0.2s ease;
 }
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 767px) {
   .header {
     height: 250px;
   }
@@ -219,8 +228,9 @@ svg#icon-camera {
 
 #logo-1 {
   width: 230px;
+  float: none;
 }
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 767px) {
   #logo-1 {
     width: 230px;
     float: none;
@@ -236,7 +246,7 @@ svg#icon-camera {
 #logo-2 {
   width: 380px;
 }
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 767px) {
   #logo-2 {
     width: calc( $mobile-width - 1rem);
   }
@@ -257,7 +267,7 @@ svg#icon-camera {
   width: 70px;
   height: 60px;
 }
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 767px) {
   #btn-camera {
     display: block;
   }
@@ -309,10 +319,10 @@ body.slide {
 /* header: on scroll*/
 .scroll .header, #scroll-fix .header {
   height: 90px;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
 }
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 767px) {
   .scroll .header, #scroll-fix .header {
     height: 90px;
   }
@@ -332,9 +342,9 @@ body.slide {
 }
 
 .scroll #header-logo, #scroll-fix #header-logo {
-  transform: scale(0.5);
+  transform: scale(0.3);
 }
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 767px) {
   .scroll #header-logo, #scroll-fix #header-logo {
     transform: scale(0.25);
   }
@@ -365,14 +375,6 @@ body.slide {
   margin: 0 auto;
 }
 
-.note-header h1 {
-  position: fixed;
-  top: 0;
-  z-index: 100000;
-  padding-right: 0.5rem;
-  text-align: right;
-}
-
 /*column layout*/
 .col-2 {
   position: relative;
@@ -384,13 +386,45 @@ body.slide {
   width: 100%;
   float: left;
 }
+@media (min-width: 375px) and (max-width: 767px) {
+  .col-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .col-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 
 .col-2:nth-child(even) {
   padding-right: 0;
 }
+@media (min-width: 375px) and (max-width: 767px) {
+  .col-2:nth-child(even) {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .col-2:nth-child(even) {
+    padding: 0;
+  }
+}
 
 .col-2:nth-child(odd) {
   padding-left: 0;
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .col-2:nth-child(odd) {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .col-2:nth-child(odd) {
+    padding: 0;
+  }
 }
 
 .column-2 {
@@ -413,6 +447,7 @@ body.slide {
 .text {
   line-height: 1.2;
   font-size: 0.8rem;
+  margin: 1rem 0 2rem 0;
 }
 
 .text p,
@@ -423,7 +458,7 @@ body.slide {
 }
 
 .text h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -453,8 +488,18 @@ body.slide {
 }
 
 figcaption {
-  padding: 0.5rem 0 1rem 0;
+  padding: 0.5rem 0 0.5rem 0;
   display: flex;
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  figcaption {
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  figcaption {
+    display: inline-block;
+  }
 }
 
 .text figcaption p {
@@ -487,7 +532,7 @@ footer .credit {
   flex: 0 0 50%;
   max-width: 50%;
 }
-@media (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 767px) {
   footer .credit {
     flex: 0 0 100%;
     max-width: 100%;

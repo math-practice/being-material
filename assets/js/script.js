@@ -35,7 +35,7 @@ $( document ).ready(function() {
                 }
             } else if ($(window).width() < 900) {
                 // $('#btn-camera').css('right', '.5rem');
-                $('.note-header h1').css('right', '.5rem');
+                $('.note-header h1').css('right', 'auto');
             }
         }
         checkHeaderLocation();
@@ -70,64 +70,64 @@ $( document ).ready(function() {
 
 
 
- /*  =========================================================================
-    ScrollMa
-    ==========================================================================   */
+    /*  =========================================================================
+        WIP: Navigation: ScrollMa
+        ==========================================================================   */
 
-    var container = document.querySelector('.scroll');
-    var text = container.querySelector('.scroll__text');
-    var steps = text.querySelectorAll('.step');
+        var container = document.querySelector('.scroll');
+        var text = container.querySelector('.scroll__text');
+        var steps = text.querySelectorAll('.step');
 
-    // initialize the scrollama
-    var scroller = scrollama();
+        // initialize the scrollama
+        var scroller = scrollama();
 
-    // scrollama event handlers
-    function handleStepEnter(response) {
-        // response = { element, direction, index }
-        console.log(response.index, '-------- enter');
-        // add to color to current step
-        response.element.classList.add('is-active');
-    }
+        // scrollama event handlers
+        function handleStepEnter(response) {
+            // response = { element, direction, index }
+            console.log(response.index, '-------- enter');
+            // add to color to current step
+            response.element.classList.add('is-active');
+        }
 
-    function handleStepExit(response) {
-        // response = { element, direction, index }
-        console.log(response.index, '-------- exit');
-        // remove color from current step
-        response.element.classList.remove('is-active');
-    }
+        function handleStepExit(response) {
+            // response = { element, direction, index }
+            console.log(response.index, '-------- exit');
+            // remove color from current step
+            response.element.classList.remove('is-active');
+        }
 
-    function handleStepProgress(response) {
-        // response = { element, progress, index }
-        console.log(response.index, '-------- progress -', response.progress);
-    }
+        function handleStepProgress(response) {
+            // response = { element, progress, index }
+            console.log(response.index, '-------- progress -', response.progress);
+        }
 
-    function init() {
-        // set random padding for different step heights (not required)
-        steps.forEach(function (step) {
-            // var v = 100 + Math.floor(Math.random() * window.innerHeight / 4);
-            // step.style.padding = v + 'px 0px';
-            // step.style.height = '300px';
-        });
+        function init() {
+            // set random padding for different step heights (not required)
+            steps.forEach(function (step) {
+                // var v = 100 + Math.floor(Math.random() * window.innerHeight / 4);
+                // step.style.padding = v + 'px 0px';
+                // step.style.height = '300px';
+            });
 
-        // 1. setup the scroller with the bare-bones options
-        // this will also initialize trigger observations
-        // 3. bind scrollama event handlers (this can be chained like below)
-        scroller.setup({
-            step: '.scroll__text .step',
-            debug: true,
-            offset: 0.2,
-            // progress: true,
-        })
-            .onStepEnter(handleStepEnter)
-            .onStepExit(handleStepExit)
-            // .onStepProgress(handleStepProgress)
+            // 1. setup the scroller with the bare-bones options
+            // this will also initialize trigger observations
+            // 3. bind scrollama event handlers (this can be chained like below)
+            scroller.setup({
+                step: '.scroll__text .step',
+                debug: true,
+                offset: 0.2,
+                // progress: true,
+            })
+                .onStepEnter(handleStepEnter)
+                .onStepExit(handleStepExit)
+                // .onStepProgress(handleStepProgress)
 
-        // setup resize event
-        window.addEventListener('resize', scroller.resize);
-    }
+            // setup resize event
+            window.addEventListener('resize', scroller.resize);
+        }
 
-    // kick things off
-    init();
+        // kick things off
+        init();
 
 
 
