@@ -10,8 +10,9 @@ path.fill {
     background-color:white;
 }
 
-.scroll .header, #scroll-fix.scroll .header
-{ position: absolute;}
+.scroll .header, #scroll-fix.scroll .header { position: absolute;}
+.scroll .header, #scroll-fix .header{ border-bottom: solid 1px black; }
+
 .button {
     border: solid 1px black;
   }

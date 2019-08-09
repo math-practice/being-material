@@ -48,6 +48,14 @@ iframe {
   padding-bottom: 0.5rem;
 }
 
+.pt-l {
+  padding-top: 1rem;
+}
+
+.pb-l {
+  padding-bottom: 1rem;
+}
+
 /*--------------------------------------------------------------
   # Typography
   --------------------------------------------------------------*/
@@ -71,7 +79,7 @@ strong, b {
 
 h1 {
   font-family: "mg-semi-mono", monospace;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: normal;
 }
 @media (min-width: 375px) and (max-width: 767px) {
@@ -318,7 +326,7 @@ body.slide {
 
 /* header: on scroll*/
 .scroll .header, #scroll-fix .header {
-  height: 90px;
+  height: 100px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -351,7 +359,7 @@ body.slide {
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .scroll #header-logo, #scroll-fix #header-logo {
-    transform: scale(0.18);
+    transform: scale(0.25);
   }
 }
 
@@ -434,6 +442,23 @@ body.slide {
   -webkit-column-gap: 20px;
   column-count: 2;
   column-gap: 20px;
+}
+
+.header-credit {
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .header-credit {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-credit {
+    display: none;
+  }
 }
 
 .tags {

@@ -39,6 +39,7 @@
         </svg>
       </div> 
     </a>
+    <div class="header-credit mono col-2"><h4>Edited by Marie-Pier Boucher,  Stefan Helmreich, Leila W. Kinney,  Skylar Tibbits, Rebecca Uchill, and  Evan Ziporyn</h4></div>
     <a id="btn-camera" class="button">
       <svg version="1.1" id="icon-camera" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   viewBox="0 0 24 19" style="enable-background:new 0 0 24 19;" xml:space="preserve">

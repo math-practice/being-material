@@ -46,7 +46,7 @@
   $p-l: 1rem;
   $container-width-l: 700px;
 
-  $h1: 1.5rem;
+  $h1: 1.3rem;
   $h2: 1.3rem;
   $body: 1rem;
   $h3: .6rem;
@@ -74,6 +74,8 @@
 
   .pt-m {padding-top:$p-m;}
   .pb-m {padding-bottom:$p-m;}
+  .pt-l {padding-top:$p-l;}
+  .pb-l {padding-bottom:$p-l;}
   
   /*--------------------------------------------------------------
     # Typography
@@ -267,6 +269,8 @@
         }
       }
 
+
+
       /* header-buttons: on camera */
       .slide #btn-camera {
       display:none;
@@ -281,7 +285,7 @@
 
     /* header: on scroll*/
     .scroll .header, #scroll-fix .header{ 
-      height:90px; 
+      height:100px; 
       max-width: $container-width-l;
       margin: 0 auto;
       @include mobile { height:90px; }
@@ -304,7 +308,7 @@
     .scroll #header-logo, #scroll-fix #header-logo { 
       transform: scale(.3); 
       @include mobile { transform: scale(.25); }
-      @include tablet { transform: scale(.18); }
+      @include tablet { transform: scale(.25); }
     }
     .scroll #header-camera, #scroll-fix #header-camera  { position: absolute; }
 
@@ -373,6 +377,15 @@
       column-count: 2;
       column-gap: 20px;
     }
+
+    .header-credit {
+      display: block;
+      position: absolute;
+      top: $p-m;
+      left: 50%;
+      @include mobile { display:none; }
+      @include tablet { display:none; }
+    }
   
   .tags {
     text-align: left;
@@ -387,6 +400,8 @@
     font-size:.8rem;
     margin: 1rem 0 2rem 0;
   }
+
+
   .text p,
   .text figure,
   .text ul,
