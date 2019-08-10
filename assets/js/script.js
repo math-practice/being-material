@@ -20,28 +20,6 @@ $( document ).ready(function() {
             changeNav();
         });
 
-    /*  =========================================================================
-        Navigation: Set a fixed position for the header in a relative position of the container
-        ==========================================================================   */
-        function checkHeaderLocation(){
-            if ($(window).width() >= 900) {
-                var headerMargin = ($(window).width() - 900)/2;  
-                $('.header').css('left', 'auto');
-                $('#btn-camera').css('right', headerMargin + 'px');
-                // $('.note-header h1').css('right', headerMargin + 'px');
-
-                if ($(body).hasClass('scroll')){
-                    $('.header').css('left', headerMargin + 'px');
-                }
-            } else if ($(window).width() < 900) {
-                $('#btn-camera').css('right', '.5rem');
-                // $('.note-header h1').css('right', 'auto');
-            }
-        }
-        checkHeaderLocation();
-        setInterval(checkHeaderLocation, 50);
-
-        });
 
 
     /*  =========================================================================
@@ -203,3 +181,4 @@ $( document ).ready(function() {
         // }
 
         
+    });

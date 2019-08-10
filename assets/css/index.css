@@ -165,15 +165,18 @@ footer .wrapper {
   padding: 0.5rem;
   box-sizing: border-box;
   transition: all 0.2s ease;
+  margin: 0 auto;
+  left: 50%;
+  margin-left: -350px;
+  width: 700px;
+  max-width: 700px;
 }
 @media (min-width: 375px) and (max-width: 767px) {
   .header {
     height: 250px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .header {
-    height: 500px;
+    width: 100%;
+    margin-left: 0;
+    left: 0;
   }
 }
 
@@ -283,12 +286,13 @@ svg#icon-camera {
 /*header-buttons*/
 #btn-camera {
   display: none;
-  position: fixed;
+  position: absolute;
   right: 0.5rem;
   top: 0.5rem;
   border-radius: 30px;
   width: 70px;
   height: 60px;
+  z-index: 1000000;
 }
 @media (min-width: 375px) and (max-width: 767px) {
   #btn-camera {
@@ -304,6 +308,10 @@ svg#icon-camera {
   #btn-camera {
     display: none;
   }
+}
+
+.scroll #btn-camera {
+  display: none;
 }
 
 [id^=btn-] {
@@ -342,33 +350,30 @@ body.slide {
 /* header: on scroll*/
 .scroll .header, #scroll-fix .header {
   height: 110px;
-  max-width: 700px;
+  position: fixed;
   margin: 0 auto;
+  left: 50%;
+  margin-left: -350px;
+  width: 700px;
+  max-width: 700px;
 }
 @media (min-width: 375px) and (max-width: 767px) {
   .scroll .header, #scroll-fix .header {
     height: 90px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .scroll .header, #scroll-fix .header {
-    height: 90px;
+    width: 100%;
+    margin-left: 0;
+    left: 0;
   }
 }
 
 .border-box {
   height: 1px;
-  width: 100%;
+  width: calc(100% - 1rem);
   background-color: black;
   position: absolute;
   top: 110px;
 }
 @media (min-width: 375px) and (max-width: 767px) {
-  .border-box {
-    top: 90px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
   .border-box {
     top: 90px;
   }
@@ -472,10 +477,23 @@ body.slide {
   padding: 1rem 0;
 }
 
+@media (min-width: 375px) and (max-width: 767px) {
+  .intro .col-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .intro .col-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
 .header-credit {
   display: block;
   position: absolute;
-  top: 0.5rem;
+  top: 1.5rem;
   left: 50%;
 }
 @media (min-width: 375px) and (max-width: 767px) {

@@ -172,8 +172,13 @@
       padding: 0.5rem;
       box-sizing: border-box;
       transition: all 0.2s ease;
-      @include mobile { height:250px;}
-      @include tablet { height:500px;}
+      margin: 0 auto;
+      left: 50%;
+      margin-left: -350px;
+      width: $container-width-l;
+      max-width: $container-width-l;
+      @include mobile { height:250px; width:100%; margin-left:0; left:0; }
+      // @include tablet { height:500px;}
 
     }
 
@@ -255,16 +260,21 @@
     /*header-buttons*/
     #btn-camera {
       display:none;
-      position: fixed;
+      position: absolute;
       right: $p-m;
       top: $p-m;
       border-radius: 30px;
       width: 70px;
       height: 60px;
+      z-index: 1000000;
       @include mobile { display:block;}
       @include tablet { display:block; }
       @include desktop { display: none; }
     } 
+
+    .scroll #btn-camera {
+      display:none;
+    }
 
     [id^=btn-] {
       cursor: pointer;
@@ -299,19 +309,24 @@
     /* header: on scroll*/
     .scroll .header, #scroll-fix .header{ 
       height:$header-height; 
-      max-width: $container-width-l;
+      position: fixed;
       margin: 0 auto;
-      @include mobile { height:90px; }
-      @include tablet { height:90px; }
+      left: 50%;
+      margin-left: -350px;
+      width: $container-width-l;
+      max-width: $container-width-l;
+      @include mobile { height:90px; width:100%; margin-left:0; left:0; }
+      // @include tablet { height:90px; width:100%; margin-left:0;left:0; }
     }
+
     .border-box {
       height:1px; 
-      width:100%; 
+      width: calc(100% - 1rem); 
       background-color: black; 
       position: absolute; 
       top: $header-height; 
       @include mobile { top:90px; }
-      @include tablet { top:90px; }
+      // @include tablet { top:90px; }
     }
 
 
@@ -350,22 +365,6 @@
     }
   
 
-    // .note-header h1 {
-    //   position:fixed;
-    //   top:$p-m;
-    //   z-index:100000;
-    //   padding-right:$p-m;
-    //   text-align:right;
-    //   margin:0;
-    //   @include mobile { position:relative; text-align:left; margin: .67em 0; }
-    //   @include tablet { position:relative; text-align:left; margin: .67em 0; }
-    // }
-
-    // .scroll .note-header h1 {
-    //   position: fixed;
-    //   text-align:right;
-    // }
-
     /*column layout*/
     .col-2 {
       position: relative;
@@ -394,11 +393,16 @@
     .credit.col-2 {
       padding: $p-l 0;
     }
+    .intro .col-2 {
+      @include mobile { flex: 0 0 50%; max-width: 50%; }
+      @include tablet {  flex: 0 0 50%; max-width: 50%; }  
+      
+    }
 
     .header-credit {
       display: block;
       position: absolute;
-      top: $p-m;
+      top: 1.5rem;
       left: 50%;
       @include mobile { display:none; }
       @include tablet { display:none; }
