@@ -84,7 +84,7 @@ strong, b {
 
 h1 {
   font-family: "mg-semi-mono", monospace;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1;
 }
@@ -124,7 +124,7 @@ h4, figcaption {
   padding: 0.5rem 0;
   border-top: none;
   border-bottom: solid 1px #828282;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .list li:first-child {
@@ -529,7 +529,7 @@ body.slide {
 }
 
 .text h2 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-top: 3rem;
   margin-bottom: 1.5rem;

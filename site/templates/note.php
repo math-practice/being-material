@@ -4,7 +4,7 @@
     <header class="note-header"> 
       <h1 class="list">
         <span><?= $page->subtitle() ?></span><br>
-        <span class="indent"><?= $page->title() ?></span>
+        <span><?= $page->title() ?></span>
       </h1>
     </header>
     <div class="note-text text">
