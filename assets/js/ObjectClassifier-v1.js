@@ -98,8 +98,7 @@ const urls = {
 Site.disableCamera = () =>{
   console.log("quit camera", Site.classifier)
 
-  
-  redirectPage("Grace_Leslie")
+  // redirectPage("Grace_Leslie")
   
   if (navigator.mediaDevices.getUserMedia !== null) {
    // still trying to stop video
