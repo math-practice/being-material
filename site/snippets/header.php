@@ -15,9 +15,11 @@
   <!--vanilla js and custom css-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <?= css(['@auto']) ?>
+  <?= snippet('objectClassifier/objectClassifierHeader') ?>
 </head>
 <body>
   <div id="view">
+    <?php snippet('objectClassifier/objectClassifier') ?>
     <a id="btn-close" class="btn">
       <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="18" cy="18" r="18" fill="black"/>

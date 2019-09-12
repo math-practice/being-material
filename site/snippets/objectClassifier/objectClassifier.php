@@ -1,2 +1,11 @@
-<h1>Object Classifier</h1>
-<h2>results:</h2>
+<div id="dom_results_wrapper">
+    <button id="startVideo" onclick="startVideo()" >Start Scan</button>
+    <h1>Results:</h1>
+    <ul id="dom_results"></ul>
+    <ul id="page_identified"></ul>
+</div>
+
+<!--p5Instance to be placed -->
+<div id="sketch"></div>
+<!--optional result div -->
+<div id="result"></div>

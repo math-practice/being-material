@@ -1,0 +1,44 @@
+#view{
+	overflow: hidden !important;
+}
+
+video{
+  top: 0;
+  left: 0;
+  transform: scale(1,1);
+  height: 33vh !important;
+  filter: grayscale(100%);
+}
+    
+#sketch{
+  background:black;
+  width: 100vw;
+  height: 33vh;
+}
+
+#dom_results_wrapper{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: red;
+	font-size: 15px;
+	background-color: rgba(255,255,255,0.8);
+	padding: 5px;
+	z-index: 100;
+	max-width: 45vw;
+	overflow-wrap: break-word;
+	overflow-y: scroll;
+}
+
+#dom_results_wrapper h1{
+	font-size: 15px;
+	margin-top: 0;
+	color: red;
+}
+
+#startVideo{
+	border: solid 1px red;
+	padding: 3px;
+	color: red;
+	background-color: transparent;
+}
