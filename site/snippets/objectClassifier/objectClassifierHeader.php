@@ -11,7 +11,8 @@
 <!-- start live video -->
 <script>
   let startVideo = () => {
-    let classifier = new p5( ObjectClassifier, 'sketch');
+    Site.classifier = new p5( ObjectClassifier, 'sketch');
     document.querySelector("#startVideo").style.display = "none";
   }
+
 </script>

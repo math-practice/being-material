@@ -30,6 +30,9 @@ $( document ).ready(function() {
         });
         $( "#btn-close" ).click(function(){	
             $('body').removeClass('slide');
+            if(Site.disableCamera !== undefined && Site.disableCamera !== null){
+                Site.disableCamera() // added for video viewport
+            }
         });
 
 

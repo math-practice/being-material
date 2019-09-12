@@ -3,10 +3,12 @@
 }
 
 video{
+  position: absolute;
   top: 0;
   left: 0;
-  transform: scale(1,1);
-  height: 33vh !important;
+  transform: scale(1,1) translateY(-50%);
+  width: 100vw !important;
+  height: 100vh !important;
   filter: grayscale(100%);
 }
     

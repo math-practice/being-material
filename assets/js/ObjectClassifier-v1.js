@@ -13,19 +13,17 @@ let classificationResults;
  * @param label_cutoffs - individual accuracy cutoffs (text lower than image) 
  */
 
-
 let Site = {};
 
 Site.undefinedCount = 0;
 Site.cameraView = "environment";
-
+Site.stream = true;
 
 let googleStorageProtocol = "https";
 if (location.protocol !== "https:") {
   googleStorageProtocol = "http";
   console.log("switched to http");
 }
-
 
 var CONSTANTS = {
     url_cloud_api : `${googleStorageProtocol}://storage.googleapis.com/04e86dd04c0411c711039770034830af/model.json`,
@@ -48,7 +46,29 @@ var CONSTANTS = {
                       }
 };
 
+
+const urls = {
+  Grace_Leslie : 'audible/grace-leslie',
+  Evan_Ziporyn : 'audible/evan-ziporyn',
+  Brendan_Landis : 'audible/brendan-landis',
+  Azra_Aksamija : 'wearable/azra-aksamija',
+  Tolini_Finamore : 'wearable/hussein-chalayan',
+  Dewa_Alit : 'audible/dewa-alit',
+  Maya_Beiser : 'audible/maya-beiser',
+  Tal_Danino : 'livable/tal-danino',
+  Lucy_McRae : 'wearable/lucy-mcrae',
+  Hyphen_Labs : 'wearable/hypen-labs',
+  Nadya_Peek : 'programmable/peek',
+  Fry_Reas : 'programmable/fry-and-reas',
+  Pawel_Romanczuk : 'audible/pawel-romanczuk',
+  Victor_Gama : 'audible/victor-gama',
+  Arnold_Dreyblatt : 'audible/arnold-dreyblatt'
+}
+
+
 /*
+ **
+ Page Numbers:
 
   Grace_Leslie p. 186
   Evan_Ziporyn p. 190
@@ -65,10 +85,6 @@ var CONSTANTS = {
   Pawel_Romanczuk
   Victor_Gama
   Arnold_Dreyblatt
-
-
-
-
  */
 
 
@@ -78,6 +94,48 @@ var CONSTANTS = {
  * P5 - Instance Mode
  * Handles the VideoStream, fetching of the Model as well as Classification 
  */
+
+Site.disableCamera = () =>{
+  console.log("quit camera", Site.classifier)
+
+  
+  redirectPage("Grace_Leslie")
+  
+  if (navigator.mediaDevices.getUserMedia !== null) {
+   // still trying to stop video
+  }
+
+  if(Site.video){
+    Site.video.stop()
+    Site.video.remove() // remove input
+    Site.classifier.remove() // remove p5 instance
+  }
+  Site.stream = false;
+   // disable camera
+}
+
+
+const redirectPage = (resultSlug) => {
+
+  console.log(resultSlug)
+  var base_url = window.location.origin;
+  var countDownSeconds = 5;
+  let countDown = setInterval(function(){
+
+    let contents = `Redirecting to ${resultSlug} in: ${countDownSeconds}`;
+
+    document.querySelector("#count_down").innerHTML = contents;
+    console.log(contents);
+    countDownSeconds--;
+
+  }, 1000)
+
+
+  setTimeout(function(){
+    clearInterval(countDown);
+    window.location.replace(base_url + "/" + urls[resultSlug]);
+  }, 6000)
+}
 
 const domOutput = ( input, boolean, response ) => {
     const domResults = document.querySelector("#dom_results");
@@ -138,7 +196,7 @@ const cameraChecks = () => {
 const ObjectClassifier = ( sketch ) => {
 
     let classifier;
-    let video;
+    Site.video;
     let CurrObject;
 
     /* Preload
@@ -147,8 +205,6 @@ const ObjectClassifier = ( sketch ) => {
      * assigns video size
      */
     sketch.preload = () => {
-        console.log("sketch.video", sketch.VIDEO)
-        
         let videoObject = { 
           video: { 
             facingMode: { 
@@ -157,20 +213,18 @@ const ObjectClassifier = ( sketch ) => {
           } 
         };
 
-        if(!isMobile()){ // fallback to use default when mobile device isn't accessible
+        if(!isMobile() || Site.cameraView === 'user'){ // fallback to use default when mobile device isn't accessible
           videoObject = sketch.VIDEO;
         }
-        
 
+        Site.video = sketch.createCapture(videoObject);
+        Site.video.elt.setAttribute('playsinline', '');
 
-        video = sketch.createCapture(videoObject);
-        video.elt.setAttribute('playsinline', '');
-
-        console.log(video)
+        console.log(Site.video)
         cameraChecks()
 
         classifier = ml5.imageClassifier(CONSTANTS.url_cloud_api);
-        video.size(window.innerWidth, window.innerHeight);
+        Site.video.size(window.innerWidth, window.innerHeight);
 
         // Optional : tests if the browser is mobile
         console.log("is the browser mobile : " + isMobile());
@@ -191,26 +245,32 @@ const ObjectClassifier = ( sketch ) => {
     
     // classifies Video 
     function classifyVideo() {
-        classifier.classify(video, gotResult);
+        classifier.classify(Site.video, gotResult);
     }
 
     // called when results are in
     function gotResult(err, results) {
         if(err){
             console.log(err);
-            domOutput(err);
+            // domOutput(err);
         }else{
+            if(Site.stream === false){
+              return;
+            }
+            console.log(Site.stream)
+
             classifyVideo();    
             CurrObject.updateCurrObject(results[0]);
             var results = CurrObject.cutoffUpdater(CONSTANTS.label_repeats);
             if (results) classificationResults = resultJSON;
-
 
             // Optional: Dev and Log display
             if(results) {
                 createResultHTML();
                 console.log(classificationResults);
                 domOutput(classificationResults.label, true, true);
+                redirectPage(classificationResults.label);
+                
             }else{
               Site.undefinedCount++;
               console.log(resultJSON)
