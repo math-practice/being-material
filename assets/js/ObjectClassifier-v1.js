@@ -18,6 +18,7 @@ let Site = {};
 Site.undefinedCount = 0;
 Site.cameraView = "environment";
 Site.stream = true;
+Site.redirectStarted = false;
 
 let googleStorageProtocol = "https";
 if (location.protocol !== "https:") {
@@ -97,7 +98,7 @@ const urls = {
 
 Site.disableCamera = () =>{
   console.log("quit camera", Site.classifier)
-
+git 
   // redirectPage("Grace_Leslie")
   
   if (navigator.mediaDevices.getUserMedia !== null) {
@@ -115,6 +116,9 @@ Site.disableCamera = () =>{
 
 
 const redirectPage = (resultSlug) => {
+
+  // redirect commencing
+  Site.redirectStarted = true;
 
   console.log(resultSlug)
   var base_url = window.location.origin;
@@ -268,7 +272,10 @@ const ObjectClassifier = ( sketch ) => {
                 createResultHTML();
                 console.log(classificationResults);
                 domOutput(classificationResults.label, true, true);
-                redirectPage(classificationResults.label);
+                if(Site.redirectStarted === false){
+                  redirectPage(classificationResults.label);
+                }
+                
                 
             }else{
               Site.undefinedCount++;
