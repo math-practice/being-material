@@ -19,6 +19,7 @@ columns:
       text:
         type: textarea
         size: large
+        font: monospace
 
   - width: 1/3
     sections:

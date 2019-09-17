@@ -1,0 +1,43 @@
+Title: Grace Leslie
+
+----
+
+Text:
+
+<audio controls autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Audible/5-7%20Leslie/Leslie_online_materials_5-7-1.mp3">
+</audio>
+
+<figcaption>
+<p class="col-2">
+<i>Vessels</i><br>2018
+</p>
+<p class="col-2">
+
+</p>
+</figcaption>
+
+<video class="video-embed" controls playsinline>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Audible/5-7%20Leslie/Leslie_online_materials_5-7-2.mp4">
+</video>
+
+<figcaption>
+<p class="col-2">
+<i>Vessels</i><br>2018
+</p>
+<p class="col-2">
+
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: <i>Vessels</i>: Being as Material
+
+----
+
+Category: Audible

@@ -1,0 +1,31 @@
+Title: Paweł Romańczuk
+
+----
+
+Text:
+
+<audio controls autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Audible/5-8%20Romańczuk/Romanczuk_online_materials_5-8-1.mp3
+">
+</audio>
+
+<figcaption>
+<p class="col-2">
+ <i>Tuoni piccoli della meccanica progressiva</i>
+</p>
+<p class="col-2">
+Mixed and recorded by Paweł Romańczuk, 2017
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: Musical Trojan Horse: Uncontrollable Sounds
+
+----
+
+Category: Audible

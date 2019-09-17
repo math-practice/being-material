@@ -15,6 +15,9 @@ columns:
 
   - width: 2/3
     sections:
+      programmable:
+        headline: Programmable
+        extends: sections/programmable
       wearable:
         headline: Wearable
         extends: sections/wearable

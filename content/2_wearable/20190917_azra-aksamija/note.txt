@@ -1,0 +1,32 @@
+Title: Azra Akšamija
+
+----
+
+Text:
+
+<video class="video-embed" controls playsinline autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-3%20Aksamija/Aksamija_online_materials_2-3-1.mov">
+</video>
+
+<figcaption>
+<p class="col-2">
+<i> Yarn-dez-vous</i><Br> 2014
+</p>
+<p class="col-2">
+Research and conceptual contributions: Lillian Harden, Regina Möller, Karina Silvester<br>
+Production: Lillian Harden, Karina Silvester [prototype development]; Andy Boit, Emma Harden, Elliot McLaughlin, Emily Tow [sewing]; Seth Avecilla, Bjorn Eric Sparrman [installation]; Gedney H. Barclay, Sooyoung Kwon [project videos]<br>
+Participants and textile donations: Ahmed Mater, Arwa Alneami, Arthur Tres, Katrina Weber Ashour, Matthew Mazzotta, Regina Möller, Ziad El Sayed
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: <i>Yarn-dez-vous</i>
+
+----
+
+Category: Wearable

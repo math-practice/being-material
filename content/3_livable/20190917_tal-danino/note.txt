@@ -1,0 +1,80 @@
+Title: Tal Danino
+
+----
+
+Text:
+
+<video class="video-embed" controls playsinline autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-1.mp4">
+</video>
+<figcaption>
+<p class="col-2">
+<i>Mirabilis 004</i><br>2018
+</p>
+<p class="col-2">
+Illuminated bacteria time-lapse video, 1920 x 1080
+</p>
+</figcaption>
+
+
+<video class="video-embed" controls playsinline autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-2.mp4">
+</video>
+<figcaption>
+<p class="col-2">
+title: <i>Soil 001</i><br>2018
+</p>
+<p class="col-2">
+Illuminated bacteria time-lapse video, 1920 x 1080
+</p>
+</figcaption>
+
+
+<video class="video-embed" controls playsinline autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-3.mp4">
+</video>
+<figcaption>
+<p class="col-2">
+<i> Mycoides 002</i><br>2018
+</p>
+<p class="col-2">
+Illuminated bacteria time-lapse video, 1920 x 1080
+</p>
+</figcaption>
+
+
+<video class="video-embed" controls playsinline autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-4.mp4">
+</video>
+<figcaption>
+<p class="col-2">
+<i> Paenibacillus 003</i><br>2017
+</p>
+<p class="col-2">
+Illuminated bacteria time-lapse video, 1920 x 1080
+</p>
+</figcaption>
+
+<video class="video-embed" controls playsinline autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-5.mp4">
+</video>
+<figcaption>
+<p class="col-2">
+<i>Subtilis 005</i><br>2018
+</p>
+<p class="col-2">
+Illuminated bacteria time-lapse video, 1920 x 1080
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: <i>Microuniverse</i>
+
+----
+
+Category: Livable

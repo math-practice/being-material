@@ -7,7 +7,7 @@
             <span class="list-title"><?= $notePage->title() ?></span>
             <ul class="list">
               <?php foreach ($notePage->children()->listed() as $album): ?>
-                <li>
+              <li<?php e($album->isActive(), ' class="active"') ?>>
                   <a href="<?= $album->url() ?>">
                    <span><?= $album->subtitle() ?></span><br>
                    <span class="indent"><?= $album->title() ?></span>
@@ -20,7 +20,7 @@
             <span class="list-title"><?= $notePage->title() ?></span>
             <ul class="list">
               <?php foreach ($notePage->children()->listed() as $album): ?>
-              <li>
+              <li<?php e($album->isActive(), ' class="active"') ?>>
                 <a href="<?= $album->url() ?>">
                   <span><?= $album->subtitle() ?></span><br>
                   <span class="indent"><?= $album->title() ?></span>
@@ -33,7 +33,7 @@
             <span class="list-title"><?= $notePage->title() ?></span>
             <ul class="list">
               <?php foreach ($notePage->children()->listed() as $album): ?>
-              <li>
+              <li<?php e($album->isActive(), ' class="active"') ?>>
                   <a href="<?= $album->url() ?>">
                    <span><?= $album->subtitle() ?></span><br>
                    <span class="indent"><?= $album->title() ?></span>
@@ -46,7 +46,7 @@
             <span class="list-title"><?= $notePage->title() ?></span>
             <ul class="list">
               <?php foreach ($notePage->children()->listed() as $album): ?>
-              <li>
+              <li<?php e($album->isActive(), ' class="active"') ?>>
                   <a href="<?= $album->url() ?>">
                    <span><?= $album->subtitle() ?></span><br>
                    <span class="indent"><?= $album->title() ?></span>
@@ -58,7 +58,7 @@
       <div class="credit col-2">
         <p><?= $site->title() ?></p>
         <p>Cambridge, MA : The MIT Press, 2019</p>
-        <p>Based on April 21-22, 2017 symposium entitled Being Material, presented by The MIT Center for Art, Science & Technology</p>
+        <p>Based on April 21-22, 2017 symposium entitled <br/>Being Material, presented by The MIT Center for Art, Science & Technology</p>
         <a href="http://mit.edu" target="_blank">&copy; <?= date('Y') ?> Massachusetts Institute of Technology</a>
           <?php if ($about = page('about')): ?>
           <?php endif ?>

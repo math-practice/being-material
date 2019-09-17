@@ -1,0 +1,30 @@
+Title: Arnold Dreyblatt
+
+----
+
+Text:
+
+<audio controls autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Audible/5-4%20Dreyblatt/Dreyblatt_online_materials_5-4-1.mp3">
+</audio>
+
+<figcaption>
+<p class="col-2">
+<i>Magnetom</i> 
+</p>
+<p class="col-2">
+Live recording by Arnold Drebylatt
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: Magnetic Resonances
+
+----
+
+Category: Audible

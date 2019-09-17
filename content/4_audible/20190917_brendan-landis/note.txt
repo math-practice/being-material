@@ -1,0 +1,30 @@
+Title: Brendan Landis
+
+----
+
+Text:
+
+<audio controls autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Audible/5-6%20Landis/Landis_online_materials_5.6.1.mp3">
+</audio>
+
+<figcaption>
+<p class="col-2">
+<i>Every Recording of Gymnopédie 1</i><br>New York City, 2016
+</p>
+<p class="col-2">
+Composed by Erik Satie. Concept and assembly by Brendan Landis.
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: Hey Exit: <i>Every Recording of Gymnopédie 1</i>
+
+----
+
+Category: Audible
