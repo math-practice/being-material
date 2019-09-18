@@ -1,0 +1,32 @@
+Title: Victor Gama
+
+----
+
+Text:
+
+<video class="video-embed" controls playsinline autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Audible/5-5%20Gama/Gama_online_materials_5-5-1.mp4">
+</video>
+
+<figcaption>
+<p class="col-2">
+Pieces for Acrux and Toha
+</p>
+<p class="col-2">
+Performed by the Acruxon Ensemble, harpist Salomé Pais Matos, and Victor Gama.<br>
+Filmed at the Fundación Carlos De Amberes, Madrid, 2012, Royal Opera House, London, 2012, and Royal Concertgebouw, Amsterdam, 2011.<br>
+Credit video: Victor Gama, Rui Peralta, Prince Claus Fund.
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: Born-Digital Musical Instruments
+
+----
+
+Category: Audible

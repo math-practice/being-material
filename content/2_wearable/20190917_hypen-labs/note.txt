@@ -1,0 +1,35 @@
+Title: Hypen Labs
+
+----
+
+Text:
+
+(img:
+	url:https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-6%20Hyphen%20Labs/Hyphen_Lab_online_materials_2-6-1.gif
+	title: <i>Snapchat Camo</i>
+	caption: Hyphen-Labs x Adam Harvey
+)
+
+(img:
+	url:https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-6%20Hyphen%20Labs/Hyphen_Lab_online_materials_2-6-2.gif
+	title: <i>False Faces</i>
+	caption: Hyphen-Labs x Adam Harvey
+)
+
+(img:
+	url:https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-6%20Hyphen%20Labs/Hyphen_Lab_online_materials_2-6-3.gif
+	title: <i>Saliency Map</i>
+	caption: Hyphen-Labs x Adam Harvey
+)
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: The Algorithms Have Eyes
+
+----
+
+Category: Wearable

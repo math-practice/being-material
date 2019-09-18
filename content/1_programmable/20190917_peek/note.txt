@@ -1,0 +1,31 @@
+Title: Nadya Peek
+
+----
+
+Text:
+
+<video class="video-embed" controls playsinline autoplay>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Programmable/1-5%20Peek/Peek_online_materials_.1-5-1.mp4">
+</video>
+
+<figcaption>
+<p class="col-2">
+Machine-o-Matic
+</p>
+<p class="col-2">
+By Machine Agency<br>
+The Machine-o-Matic interface, authored by Machine Agent Jasper Tran O’Leary, allows users to drag and drop machine modules which correspond to a program that represents the full machine [lower right], which then compiles to a motor controller that accepts machine instructions for the simulated or real machine.
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: Machine Agency
+
+----
+
+Category: Programmable

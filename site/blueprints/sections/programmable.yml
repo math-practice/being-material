@@ -1,6 +1,6 @@
 type: pages
 headline: Audible
-parent: kirby.page("audible")
+parent: kirby.page("programmable")
 info: "{{ page.date.toDate('d.m.Y') }}"
 template: note
 empty: No notes yet

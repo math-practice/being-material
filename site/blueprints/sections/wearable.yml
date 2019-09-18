@@ -4,4 +4,4 @@ parent: kirby.page("wearable")
 info: "{{ page.date.toDate('d.m.Y') }}"
 template: note
 empty: No notes yet
-sortBy: date desc
+# sortBy: date desc
