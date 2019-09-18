@@ -118,11 +118,21 @@
       font-family:'mg-semi-mono', monospace;
       font-size: $h3;
       font-weight: normal;
+      span.name {
+        display: inline-block;
+        font-size: 0.9em;
+      }
     }
     
     h4, figcaption {
       font-size: $h4;
       font-weight:normal;
+    }
+    h4 {
+      span.name {
+        display: inline-block;
+        font-size: 0.9em;
+      }
     }
 
     .license {

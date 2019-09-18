@@ -34,8 +34,7 @@ i {
   -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-9.5deg, 0deg);
   -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-9.5deg, 0deg);
   -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-9.5deg, 0deg);
-  transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-9.5deg, 0deg);
-}
+  transform: scale(1) rotate(0deg) translate(0px, 0px) skew(-9.5deg, 0deg); }
 
 img {
   width: 100%; }
@@ -78,48 +77,57 @@ strong, b {
 
 h1 {
   font-family: 'mg-semi-mono', monospace;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: normal;
-  line-height: 1; }
+  line-height: 1.1; }
   @media (min-width: 375px) and (max-width: 767px) {
     h1 {
-      font-size: 1rem; } }
+      font-size: 0.9rem; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     h1 {
-      font-size: 1rem; } }
+      font-size: 0.9rem; } }
 
 h3 {
   font-family: 'mg-semi-mono', monospace;
   font-size: 0.6rem;
   font-weight: normal; }
+  h3 span.name {
+    display: inline-block;
+    font-size: 0.9em; }
 
 h4, figcaption {
   font-size: 0.45rem;
   font-weight: normal; }
 
+h4 span.name {
+  display: inline-block;
+  font-size: 0.9em; }
+
 .license {
   position: absolute;
   bottom: 1em;
   font-size: 0.45rem;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
 .list-title {
   font-family: 'mg-semi-mono', monospace;
   display: block;
   text-transform: uppercase;
   font-size: 0.45rem;
-  padding: 1rem 0 0.5rem 0; }
+  padding: 2rem 0 0.5rem 0;
+  letter-spacing: 0.03em; }
 
 .list li {
   font-family: 'mg-semi-mono', monospace;
   padding: .5rem 0;
   border-top: none;
-  border-bottom: solid 1px #828282;
+  border-bottom: solid 1px #444;
   font-size: .8rem; }
+  .list li.active {
+    color: #5a5a5a; }
 
 .list li:first-child {
-  border-top: solid 1px #828282; }
+  border-top: solid 1px #444; }
 
 .list span {
   display: inline-block; }
@@ -342,6 +350,7 @@ body.slide {
 
 /* page */
 .page {
+  position: relative;
   padding: 0.5rem; }
 
 .page > * {
@@ -389,8 +398,7 @@ body.slide {
   padding: 1rem 0; }
 
 .credit p {
-  margin-bottom: 1em;
-}
+  margin-bottom: 1em; }
 
 @media (min-width: 375px) and (max-width: 767px) {
   .intro .col-2 {
@@ -423,7 +431,9 @@ body.slide {
 .text {
   line-height: 1.2;
   font-size: .8rem;
-  margin: 1rem 0 2rem 0; }
+  margin: 1rem 0 0.25rem 0;
+  padding-bottom: 3rem;
+  min-height: 40vh; }
 
 .text p,
 .text figure,
@@ -472,6 +482,14 @@ figcaption {
 /*media*/
 video {
   width: 100%; }
+  video.video-embed {
+    width: 100% !important;
+    height: auto !important;
+    position: relative;
+    transform: scale(1, 1) translateY(0);
+    filter: none; }
+    video.video-embed:focus {
+      outline: none; }
 
 video#player {
   position: relative; }
@@ -489,11 +507,9 @@ figure {
   padding-top: 1rem; }
 
 audio {
-  width: 100%;
-}
-audio:focus {
-  outline: none;
-}
+  width: 100%; }
+  audio:focus {
+    outline: none; }
 
 /* footer */
 footer {

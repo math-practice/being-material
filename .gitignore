@@ -10,7 +10,8 @@ Icon
 /media/*
 !/media/index.html
 
-**.sass-cache**
+.sass-cache*
+.css.map
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
