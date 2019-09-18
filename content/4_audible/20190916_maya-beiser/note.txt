@@ -1,0 +1,34 @@
+Title: Maya Beiser
+
+----
+
+Text:
+
+<video class="video-embed" controls playsinline>
+<source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-1.mp4">
+</video>
+
+<figcaption>
+<p class="col-2">
+<i>Air</i>
+</p>
+
+<p class="col-2">
+A film by Maya Beiser<br><i>Air [from Orchestra Suite No. 3, BWV 1068]</i> by J. S. Bach, arranged and performed by Maya Beiser, from her album <i>TranceClassical</i> [Innova Recordings]<br>
+	Producer and Director: Maya Beiser<br>
+	Associate Director and DP: Ben Wolf<br>
+	Choreographer: Kathleen Kelly | Proteo Media + Performance
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: <i>Air</i>
+
+----
+
+Category: Audible

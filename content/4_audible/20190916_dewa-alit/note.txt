@@ -1,0 +1,31 @@
+Title: Dewa Alit
+
+----
+
+Text:
+
+<audio controls>
+    <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Audible/5-2%20Alit/Alit_online_materials_5-2-1.mp3"/>
+</audio>
+
+<figcaption>
+<p class="col-2">
+<i>Yeh Ngetel</i> [Dripping Water]<Br>Movement 4 of <i>Tanah Sedang Bicara</i>[Land Is Talking]
+</p>
+
+<p class="col-2">
+Performed by Gamelan Salukat, from the album Dewa Alit/Gamelan Salukat, <i>Genetic/Land Is Talking</i>
+</p>
+</figcaption>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: On “Land”
+
+----
+
+Category: Audible

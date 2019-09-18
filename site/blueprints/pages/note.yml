@@ -18,7 +18,7 @@ columns:
     fields:
       text:
         type: textarea
-        size: large
+        size: small
 
   - width: 1/3
     sections:
