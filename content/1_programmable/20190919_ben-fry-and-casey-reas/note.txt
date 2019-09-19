@@ -2,17 +2,18 @@ Title: Ben Fry and Casey Reas
 
 ----
 
-Subtitle: Code as Material
-
-----
-
 Text:
 
-(iframe: 
-	url: https://editor.p5js.org/undefined/embed/4vnFkM4g9
-	title: 
-	caption: The code examples in the book create static images, but on a screen the code can respond to you. Press and move your finger [or click the mouse] and the circles will follow. This code was ported from an original Processing example from 2003 to work through a current web browser with p5.js, another platform created by the Processing Foundation.
-)
+<iframe src="https://editor.p5js.org/undefined/embed/4vnFkM4g9" style="width: 100%; min-height: 478px; overflow: hidden;"></iframe>
+
+<figcaption>
+<p class="col-2">
+</p>
+<p class="col-2">
+The code examples in the book create static images, but on a screen the code can respond to you. Press and move your finger [or click the mouse] and the circles will follow. This code was ported from an original Processing example from 2003 to work through a current web browser with p5.js, another platform created by the Processing Foundation.<br><br>
+(link: https://editor.p5js.org/REAS/sketches/4vnFkM4g9 text: https://editor.p5js.org/REAS/sketches/4vnFkM4g9)
+</p>
+</figcaption>
 
 
 ```php
@@ -89,10 +90,16 @@ class Eye {
     pop();
   }
 }
+```
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: Code as Material
 
 ----
 
 Category: Programmable
-
-----
- 
