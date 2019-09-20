@@ -28,7 +28,7 @@ if (location.protocol !== "https:") {
 
 var CONSTANTS = {
     url_cloud_api : `${googleStorageProtocol}://storage.googleapis.com/04e86dd04c0411c711039770034830af/model.json`,
-    label_repeats : 5,
+    label_repeats : 3,
     label_cutoffs : {   'Grace_Leslie': 0.80,
                         'Evan_Ziporyn': 0.95,
                         'Brendan_Landis': 0.95,
