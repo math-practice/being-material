@@ -22,7 +22,7 @@ Illuminated bacteria time-lapse video, 1920 x 1080
 </video>
 <figcaption>
 <p class="col-2">
-title: <i>Soil 001</i><br>2018
+<i>Soil 001</i><br>2018
 </p>
 <p class="col-2">
 Illuminated bacteria time-lapse video, 1920 x 1080

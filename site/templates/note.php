@@ -3,8 +3,8 @@
   <article class="note">
     <header class="note-header"> 
       <h1 class="list">
-        <span><?= $page->subtitle() ?></span><br>
-        <span><?= $page->title() ?></span>
+        <span class="subtitle"><?= $page->subtitle() ?></span><br>
+        <span class="title"><?= $page->title() ?></span>
       </h1>
     </header>
     <div class="note-text text">

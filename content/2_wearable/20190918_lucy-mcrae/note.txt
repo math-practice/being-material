@@ -10,7 +10,7 @@ Text:
 
 <figcaption>
 <p class="col-2">
-Make your Maker<br> 2012
+<i>Make your Maker</i><br> 2012
 </p>
 <p class="col-2">
 A Lucy McRae film commissioned by Misschu Australia, est. 2007<br>
@@ -41,8 +41,7 @@ A Lucy McRae film commissioned by Ars Electronica, Linz [co-commissioning agent]
 	Co-producer: Claudia Schnugg<br>
 	Microgravity trainer fabricator: Daniel Gower<br>
 	Editor: Domenico Favata<br>
-	Soundtrack: Bizarre Rituals, United Kingdom<br>
-)
+	Soundtrack: Bizarre Rituals, United Kingdom
 </p>
 </figcaption>
 

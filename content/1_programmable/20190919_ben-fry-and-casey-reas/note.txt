@@ -1,0 +1,105 @@
+Title: Ben Fry and Casey Reas
+
+----
+
+Text:
+
+<iframe src="https://editor.p5js.org/undefined/embed/4vnFkM4g9" style="width: 100%; min-height: 478px; overflow: hidden;"></iframe>
+
+<figcaption>
+<p class="col-2">
+</p>
+<p class="col-2">
+The code examples in the book create static images, but on a screen the code can respond to you. Press and move your finger [or click the mouse] and the circles will follow. This code was ported from an original Processing example from 2003 to work through a current web browser with p5.js, another platform created by the Processing Foundation.<br><br>
+(link: https://editor.p5js.org/REAS/sketches/4vnFkM4g9 text: https://editor.p5js.org/REAS/sketches/4vnFkM4g9)
+</p>
+</figcaption>
+
+
+```php
+let eyes = [];
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noStroke();
+  let divs = 7;
+  let diameter = windowWidth / divs;
+  let ydivs = ceil(windowHeight / diameter);
+  let numeyes = (divs * ydivs);
+  print(numeyes);
+  let x = -diameter * floor(divs / 2);
+  let y = 0;
+  if (ydivs % 2 == 0) {
+    y = -diameter * floor(ydivs / 2) + diameter / 2;
+  } else {
+    y = -diameter * floor(ydivs / 2);
+  }
+  let xcount = 0;
+  let ycount = 0;
+  for (let i = 0; i < numeyes; i++) {
+    eyes.push(new Eye(x, y, diameter * 0.9));
+    x += diameter;
+    xcount++;
+    if (xcount == divs) {
+      xcount = 0;
+      x = -diameter * floor(divs / 2);
+      y += diameter;
+    }
+  }
+}
+
+function draw() {
+  updateEyes();
+}
+
+function updateEyes() {
+  background(102);
+  translate(width / 2, height / 2);
+  for (let i = 0; i < eyes.length; i++) {
+    eyes[i].update();
+    eyes[i].display();
+  }
+}
+
+class Eye {
+  constructor(tx, ty, ts) {
+    this.x = tx;
+    this.y = ty;
+    this.size = ts;
+    this.radius = ts / 4.0;
+    this.currentRadius = 0.0;
+  }
+
+  update() {
+    this.angle = atan2(mouseY - height / 2 - this.y, mouseX - width / 2 - this.x);
+    if (mouseIsPressed) {
+      this.currentRadius += (this.radius - this.currentRadius) * 0.1;
+    } else {
+      this.currentRadius += (-this.currentRadius) * 0.1;
+    }
+  }
+
+  display() {
+    push();
+    translate(this.x, this.y);
+    fill(255);
+    ellipse(0, 0, this.size, this.size);
+    rotate(this.angle);
+    fill(153, 204, 0);
+    ellipse(this.currentRadius, 0, this.size / 2, this.size / 2);
+    pop();
+  }
+}
+```
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: Code as Material
+
+----
+
+Category: Programmable

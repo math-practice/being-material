@@ -251,15 +251,14 @@ return [
             'html' => function($tag) {
                 return    
                 // movie file embed    
-                // '<video id="player" playsinline controls>
-                //     <source src="http://beingmaterial.mit.edu/'. $tag->url. '.mp4" type="video/mp4" />
-                //     <source src="http://beingmaterial.mit.edu/' . $tag->url. '.webm" type="video/webm" />
-                // </video>
-                // <figcaption><p>'. $tag->title .'</p><p class="column-2">'. $tag->caption .'</p></figcaption>';
+                '<video id="player" playsinline crossorigin controls>
+                    <source src="'. $tag->url. '" type="video/mp4" />
+                </video>
+                <figcaption><p class="col-2">'. $tag->title .'</p><p class="col-2">'. $tag->caption .'</p></figcaption>';
                 
                 //youtube embedfor dummy
-                '<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="'. $tag->url. '"></div>
-                <figcaption><p class="col-2">'. $tag->title .'</p><p class="col-2">'. $tag->caption .'</p></figcaption>';
+                // '<div id="player" data-plyr-provider="youtube" data-plyr-embed-id="'. $tag->url. '"></div>
+                // <figcaption><p class="col-2">'. $tag->title .'</p><p class="col-2">'. $tag->caption .'</p></figcaption>';
             }
         ],
 
