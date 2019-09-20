@@ -58,9 +58,9 @@ const urls = {
   Maya_Beiser : 'audible/maya-beiser',
   Tal_Danino : 'livable/tal-danino',
   Lucy_McRae : 'wearable/lucy-mcrae',
-  Hyphen_Labs : 'wearable/hypen-labs',
-  Nadya_Peek : 'programmable/peek',
-  Fry_Reas : 'programmable/fry-and-reas',
+  Hyphen_Labs : 'wearable/hyphen-labs',
+  Nadya_Peek : 'programmable/nadya-peek',
+  Fry_Reas : 'programmable/ben-fry-and-casey-reas',
   Pawel_Romanczuk : 'audible/pawel-romanczuk',
   Victor_Gama : 'audible/victor-gama',
   Arnold_Dreyblatt : 'audible/arnold-dreyblatt'
