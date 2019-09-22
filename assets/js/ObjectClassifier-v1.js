@@ -28,22 +28,22 @@ if (location.protocol !== "https:") {
 
 var CONSTANTS = {
     url_cloud_api : `${googleStorageProtocol}://storage.googleapis.com/04e86dd04c0411c711039770034830af/model.json`,
-    label_repeats : 3,
-    label_cutoffs : {   'Grace_Leslie': 0.80,
-                        'Evan_Ziporyn': 0.95,
-                        'Brendan_Landis': 0.95,
-                        'Azra_Aksamija': 0.95,
-                        'Tolini_Finamore': 0.95,
-                        'Dewa_Alit': 0.95,
-                        'Maya_Beiser': 0.95,
-                        'Tal_Danino': 0.95,
-                        'Lucy_McRae': 0.95,
-                        'Hyphen_Labs': 0.95,
-                        'Nadya_Peek': 0.95,
-                        'Fry_Reas': 0.95,
-                        'Pawel_Romanczuk': 0.95,
-                        'Victor_Gama': 0.95,
-                        'Arnold_Dreyblatt': 0.95
+    label_repeats : 2,
+    label_cutoffs : {   'Grace_Leslie': 0.96,
+                        'Evan_Ziporyn': 0.9,
+                        'Brendan_Landis': 0.9,
+                        'Azra_Aksamija': 0.85,
+                        'Tolini_Finamore': 0.9,
+                        'Dewa_Alit': 0.85,
+                        'Maya_Beiser': 0.9,
+                        'Tal_Danino': 0.9,
+                        'Lucy_McRae': 0.9,
+                        'Hyphen_Labs': 0.9,
+                        'Nadya_Peek': 0.9,
+                        'Fry_Reas': 0.85,
+                        'Pawel_Romanczuk': 0.9,
+                        'Victor_Gama': 0.9,
+                        'Arnold_Dreyblatt': 0.85
                       }
 };
 
