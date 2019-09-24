@@ -19,6 +19,7 @@
   <?= snippet('objectClassifier/objectClassifierHeader') ?>
 </head>
 <body id="scroll-fix">
+  <?php snippet('objectClassifier/objectClassifierBanner') ?>
   <div id="view">
     <?php snippet('objectClassifier/objectClassifier') ?>
     <a id="btn-close" class="btn">

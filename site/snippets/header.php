@@ -18,6 +18,7 @@
   <?= snippet('objectClassifier/objectClassifierHeader') ?>
 </head>
 <body>
+  <?php snippet('objectClassifier/objectClassifierBanner') ?>
   <div id="view">
     <?php snippet('objectClassifier/objectClassifier') ?>
     <a id="btn-close" class="btn">

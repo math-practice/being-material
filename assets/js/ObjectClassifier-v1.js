@@ -20,6 +20,15 @@ Site.cameraView = "environment";
 Site.stream = true;
 Site.redirectStarted = false;
 
+Site.browserBanner = function(){
+  var siteBanner = document.querySelector("#camera_banner");
+  var bannerContents = document.querySelector("#camera_banner_contents");
+  siteBanner.classList.add("switchBrowsers");
+  bannerContents.innerHTML = "Please open this site in mobile Safari for a full experience...";
+}
+
+
+
 let googleStorageProtocol = "https";
 if (location.protocol !== "https:") {
   googleStorageProtocol = "http";
@@ -29,21 +38,21 @@ if (location.protocol !== "https:") {
 var CONSTANTS = {
     url_cloud_api : `${googleStorageProtocol}://storage.googleapis.com/04e86dd04c0411c711039770034830af/model.json`,
     label_repeats : 3,
-    label_cutoffs : {   'Grace_Leslie': 0.80,
-                        'Evan_Ziporyn': 0.95,
-                        'Brendan_Landis': 0.95,
-                        'Azra_Aksamija': 0.95,
-                        'Tolini_Finamore': 0.95,
-                        'Dewa_Alit': 0.95,
-                        'Maya_Beiser': 0.95,
-                        'Tal_Danino': 0.95,
-                        'Lucy_McRae': 0.95,
-                        'Hyphen_Labs': 0.95,
-                        'Nadya_Peek': 0.95,
-                        'Fry_Reas': 0.95,
-                        'Pawel_Romanczuk': 0.95,
-                        'Victor_Gama': 0.95,
-                        'Arnold_Dreyblatt': 0.95
+    label_cutoffs : {   'Grace_Leslie': 0.75,
+                        'Evan_Ziporyn': 0.75,
+                        'Brendan_Landis': 0.75,
+                        'Azra_Aksamija': 0.75,
+                        'Tolini_Finamore': 0.75,
+                        'Dewa_Alit': 0.75,
+                        'Maya_Beiser': 0.75,
+                        'Tal_Danino': 0.75,
+                        'Lucy_McRae': 0.75,
+                        'Hyphen_Labs': 0.75,
+                        'Nadya_Peek': 0.75,
+                        'Fry_Reas': 0.75,
+                        'Pawel_Romanczuk': 0.75,
+                        'Victor_Gama': 0.75,
+                        'Arnold_Dreyblatt': 0.75
                       }
 };
 
@@ -98,8 +107,6 @@ const urls = {
 
 Site.disableCamera = () =>{
   console.log("quit camera", Site.classifier)
-git 
-  // redirectPage("Grace_Leslie")
   
   if (navigator.mediaDevices.getUserMedia !== null) {
    // still trying to stop video
@@ -122,47 +129,32 @@ const redirectPage = (resultSlug) => {
 
   console.log(resultSlug)
   var base_url = window.location.origin;
-  var countDownSeconds = 5;
-  let countDown = setInterval(function(){
-
-    let contents = `Redirecting to ${resultSlug} in: ${countDownSeconds}`;
-
-    document.querySelector("#count_down").innerHTML = contents;
-    console.log(contents);
-    countDownSeconds--;
-
-  }, 1000)
-
 
   setTimeout(function(){
-    clearInterval(countDown);
     window.location.replace(base_url + "/" + urls[resultSlug]);
-  }, 6000)
+  }, 2500);
 }
 
 const domOutput = ( input, boolean, response ) => {
-    const domResults = document.querySelector("#dom_results");
-    const pageIdentified = document.querySelector("#page_identified");
-    if(domResults !== undefined){
-        if(boolean && response){
-          pageIdentified.innerHTML = `
-            <li>
-                output: ${input}
-            </li>
-          `;
-        }else if(boolean){
-          domResults.innerHTML = `
-            <li>
-                output: ${input}
-            </li>
-          `;
-        }else{
-          domResults.innerHTML += `
-            <li>
-                ${input}
-            </li>
-          `;
+    const bannerOutput = document.querySelector("#camera_banner_contents");
+    const pageLoader = document.querySelector("#page_loader");
+
+    if(bannerOutput !== undefined){
+      if(boolean && response){
+
+        if(!pageLoader.classList.contains("active")){
+          pageLoader.classList.add("active");
+          pageLoader.innerHTML = `<svg viewBox="60 0 320 330">
+            <path d="M 75, 75 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" fill="none" stroke="rgb(90,90,90)" stroke-width="150" stroke-dasharray="0 600 600 0" stroke-dashoffset="1000" transform="translate(75,75) rotate(90,100,100) ">
+              <animate attributeType="XML" attributeName="stroke-dashoffset" from="0" to="600" dur="2s" repeatCount="1" fill="freeze"/> 
+            </path>
+          </svg>`;
         }
+        
+        bannerOutput.innerHTML = `${input}`;
+      }else if((boolean && Site.redirectStarted !== true) || Site.redirectStarted !== true){
+        bannerOutput.innerHTML = `${input}`;
+      }
         
     }
 }
@@ -171,7 +163,8 @@ const cameraChecks = () => {
 
   if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
     console.log("enumerateDevices() not supported.");
-    domOutput("enumerateDevices() not supported.")
+    // domOutput("enumerateDevices() not supported.")
+    Site.browserBanner();
     return;
   }
 
@@ -184,13 +177,12 @@ const cameraChecks = () => {
       let output = device.kind + ": " + device.label + " id = " + device.deviceId;
 
       console.log(output);
-      domOutput(output);
 
     });
   })
   .catch(function(err) {
     console.log(err.name + ": " + err.message);
-    domOutput(err.name + ": " + err.message);
+    // domOutput(err.name + ": " + err.message);
   });
 
 }
@@ -231,7 +223,6 @@ const ObjectClassifier = ( sketch ) => {
 
         // Optional : tests if the browser is mobile
         console.log("is the browser mobile : " + isMobile());
-        domOutput("is the browser mobile: " + isMobile());
         if(!isMobile()){
           alert("This is a Mobile Application, please switch to a Mobile Browser");
         }
@@ -255,7 +246,6 @@ const ObjectClassifier = ( sketch ) => {
     function gotResult(err, results) {
         if(err){
             console.log(err);
-            // domOutput(err);
         }else{
             if(Site.stream === false){
               return;
@@ -280,7 +270,8 @@ const ObjectClassifier = ( sketch ) => {
             }else{
               Site.undefinedCount++;
               console.log(resultJSON)
-              domOutput("page unidentified,<br>label: " + resultJSON.label +", " + resultJSON.confidence + "<br>" + Site.undefinedCount, true);
+              domOutput("Analyzing...");
+              // domOutput("page unidentified,<br>label: " + resultJSON.label +", " + resultJSON.confidence + "<br>" + Site.undefinedCount, true);
             }
 
 

@@ -27,10 +27,14 @@ $( document ).ready(function() {
         Toggle camera div
         ==========================================================================   */
         $( "#btn-camera" ).click(function(){	
-            $('body').addClass('slide');
+            // $('body').addClass('slide');
+            $('body').addClass('show_camera');
+
         });
         $( "#btn-close" ).click(function(){	
-            $('body').removeClass('slide');
+            // $('body').removeClass('slide');
+            $('body').removeClass('show_camera');
+            $("#camera_banner").removeClass('active'); // added 
             if(Site.disableCamera !== undefined && Site.disableCamera !== null){
                 Site.disableCamera() // added for video viewport
             }

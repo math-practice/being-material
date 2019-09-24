@@ -80,10 +80,11 @@
 // const player = new Plyr('#player');
 //multiple 
 const players = Plyr.setup('#player');
-player.toggleControls(false)
+
+player.toggleControls(false);
 
 player.on('play', event => {
-     player.toggleControls(true);
+     players.toggleControls(true);
 });
   </script>
 </body>
