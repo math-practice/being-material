@@ -5,6 +5,7 @@
 	'https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js',
 	'https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js',
 	'https://unpkg.com/ml5@0.3.1/dist/ml5.min.js',
+	'assets/js/Tone.js',
 	'assets/js/ObjectClassifier-v1.js'
 ]) ?>
 
@@ -18,7 +19,7 @@
   }
 
   let startHomeVideo = () => {
-    Site.classifier = new p5( ObjectClassifier, 'home_sketch');
+    Site.classifier = new p5( CoverClassifier, 'home_sketch');
     const banner = document.querySelector("#camera_banner");
     banner.classList.add("active");
   }
@@ -28,16 +29,13 @@
   	const cameraHomeButton = document.querySelector("#btn-camera");
   	const cameraButton = document.querySelector("#book-btn");
 		
-		cameraHomeButton.addEventListener("click", function(){
-			console.log("start full video")
-			startHomeVideo();
-			
-		});
-
-		cameraButton.addEventListener("click", function(){
-			startVideo();
-		});
-
+		if(cameraHomeButton !== undefined){
+			cameraHomeButton.addEventListener("click", startHomeVideo);
+		}
+		
+		if(cameraButton !== undefined){
+			cameraButton.addEventListener("click", startVideo);
+		}
   }
 
 

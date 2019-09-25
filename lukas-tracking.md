@@ -43,6 +43,10 @@
 	- [x] book icon
 - [x] subpage icon build
 
+- [x] tone.js mapping
+- [ ] tone.js integration
+- [ ] image rendering
+
 
 
 
