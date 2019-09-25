@@ -17,11 +17,33 @@
     banner.classList.add("active");
   }
 
+  let startHomeVideo = () => {
+    Site.classifier = new p5( ObjectClassifier, 'home_sketch');
+    const banner = document.querySelector("#camera_banner");
+    banner.classList.add("active");
+  }
+
+  
+  let toggleCamera = () => {
+  	const cameraHomeButton = document.querySelector("#btn-camera");
+  	const cameraButton = document.querySelector("#book-btn");
+		
+		cameraHomeButton.addEventListener("click", function(){
+			console.log("start full video")
+			startHomeVideo();
+			
+		});
+
+		cameraButton.addEventListener("click", function(){
+			startVideo();
+		});
+
+  }
+
 
 	document.addEventListener('DOMContentLoaded', function(event) {
 
 		console.log("user agent \n", navigator.userAgent);
-		// alert(navigator.userAgent);
 		Site.userAgent = navigator.userAgent.toLowerCase();
 
 		if(Site.userAgent.includes("iphone")){ // check if mobile is running iOS
@@ -30,11 +52,7 @@
 			if(Site.userAgent.includes("crios") || Site.userAgent.includes("fxios")){  // check if running chrome or firefox: 
 				Site.browserBanner();
 			}else if(Site.userAgent.includes("version") && Site.userAgent.includes("safari")){
-				// alert("maybe safari? \n" + navigator.userAgent);
-				const cameraButton = document.querySelector("#btn-camera");
-				cameraButton.addEventListener("click", startVideo);
-
-
+				
 			}else{
 				Site.browserBanner();
 			}
@@ -42,6 +60,9 @@
 		}else{
 			console.log("User agent suggests device: not iOS");
 		}
+
+		toggleCamera();
+
 	})
 
 </script>

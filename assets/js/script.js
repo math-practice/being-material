@@ -9,9 +9,11 @@ $( document ).ready(function() {
             if(scrollPosY > 20) {
                 document.getElementsByTagName("body")[0].className = ('scroll');  
                 document.getElementsByClassName('header').addClass =('d-relative');
+                document.getElementById("camera_banner").classList.remove("active");
             } else if(scrollPosY <= 20) {
                 document.getElementsByTagName("body")[0].className =  ('no-scroll');
                 document.getElementsByClassName('header').addClass =('d-fixed');
+                
             }
         }
     
@@ -26,11 +28,21 @@ $( document ).ready(function() {
     /*  =========================================================================
         Toggle camera div
         ==========================================================================   */
-        $( "#btn-camera" ).click(function(){	
+        $( "#btn-camera" ).click(function(){
+            $('body').addClass("show_full_camera");
+        })
+
+        $( "#book-btn" ).click(function(){	
             // $('body').addClass('slide');
+            if($('body').hasClass("show_full_camera")){
+              $('body').removeClass("show_full_camera"); // disable cover camera
+            }
+
+            // instantiate slide camera
             $('body').addClass('show_camera');
 
         });
+
         $( "#btn-close" ).click(function(){	
             // $('body').removeClass('slide');
             $('body').removeClass('show_camera');

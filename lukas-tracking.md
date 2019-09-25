@@ -20,14 +20,11 @@
 
 
 ## Sept 24 
-- [ ] UI
+- [x] UI
 	- [x] camera view
 	- [ ] banner
 		- [x] timer / title
 		- [x] info
-
-
-
 - [ ] device detection
 	- [x] check if apple, 
 	- [x] if apple: check if safari
@@ -40,7 +37,11 @@
 
 
 ## Cover
-- [ ] cover build
+- [x] cover build 
+	- [x] small type
+	- [x] full screen camera (green filter)
+	- [x] book icon
+- [x] subpage icon build
 
 
 

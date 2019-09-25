@@ -81,11 +81,12 @@
 //multiple 
 const players = Plyr.setup('#player');
 
-player.toggleControls(false);
+// commented out bc of error thrown: 
+// player.toggleControls(false);
 
-player.on('play', event => {
-     players.toggleControls(true);
-});
+// player.on('play', event => {
+//      players.toggleControls(true);
+// });
   </script>
 </body>
 </html>

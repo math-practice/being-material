@@ -29,6 +29,7 @@
     </a>
   </div>
 <div class="wrapper">
+  <?php snippet('objectClassifier/objectClassifierCover') ?>
   <header class="header">
     <a id="header-logo" href="<?= $site->url() ?>">
       <div id="logo-1">
@@ -42,7 +43,7 @@
         </svg>
       </div> 
     </a>
-    <a id="btn-camera" class="button">
+    <a id="btn-camera" class="button home_camera_button">
       <svg version="1.1" id="icon-camera" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
   viewBox="0 0 24 19" style="enable-background:new 0 0 24 19;" xml:space="preserve">
       <path class="fill" d="M2,4h13c1.1,0,2,0.9,2,2v9c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2V6C0,4.9,0.9,4,2,4z"/>

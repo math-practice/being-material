@@ -190,6 +190,9 @@ const cameraChecks = () => {
 
 const ObjectClassifier = ( sketch ) => {
 
+  console.log("sketch \n", sketch)
+
+
     let classifier;
     Site.video;
     let CurrObject;
@@ -199,6 +202,7 @@ const ObjectClassifier = ( sketch ) => {
      * fetches Models from Cloud
      * assigns video size
      */
+
     sketch.preload = () => {
         let videoObject = { 
           video: { 
@@ -215,7 +219,7 @@ const ObjectClassifier = ( sketch ) => {
         Site.video = sketch.createCapture(videoObject);
         Site.video.elt.setAttribute('playsinline', '');
 
-        console.log(Site.video)
+        console.log("site.video\n", Site.video)
         cameraChecks()
 
         classifier = ml5.imageClassifier(CONSTANTS.url_cloud_api);

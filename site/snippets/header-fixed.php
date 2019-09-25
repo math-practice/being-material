@@ -51,12 +51,8 @@
         <span class="name">Rebecca Uchill, </span>
         and
         <span class="name">Evan Ziporyn</span></h4></div>
-    <a id="btn-camera" class="button">
-      <svg version="1.1" id="icon-camera" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-  viewBox="0 0 24 19" style="enable-background:new 0 0 24 19;" xml:space="preserve">
-      <path class="fill" d="M2,4h13c1.1,0,2,0.9,2,2v9c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2V6C0,4.9,0.9,4,2,4z"/>
-      <path class="fill"  d="M23.3,4l-4.8,2.8v6.4l4.8,2.8c0.3,0.2,0.7,0,0.7-0.4V4.4C24,4,23.6,3.8,23.3,4z"/>
-      </svg>
+    <a id="book-btn" class="button">
+      <svg id="book-btn-svg" fill="none" height="16" viewBox="0 0 41 16" width="41" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path d="m0 14v-13c4 0 7 0 8 .99998v13.00002c-1-1-4-1-8-1z"/><path d="m17 14v-13c-4 0-7 0-8 .99998v13.00002c1-1 4-1 8-1z"/><path d="m27 7c-.5523 0-1 .44772-1 1s.4477 1 1 1zm13.7071 1.70711c.3905-.39053.3905-1.02369 0-1.41422l-6.364-6.363958c-.3905-.390524-1.0236-.390524-1.4142 0-.3905.390528-.3905 1.023688 0 1.414218l5.6569 5.65685-5.6569 5.6569c-.3905.3905-.3905 1.0236 0 1.4142.3906.3905 1.0237.3905 1.4142 0zm-13.7071.29289h13v-2h-13z"/></g></svg>
     </a>
     <div class="border-box"></div>
   </header>
