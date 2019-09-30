@@ -36,6 +36,9 @@ $( document ).ready(function() {
             // $('body').addClass('slide');
             if($('body').hasClass("show_full_camera")){
               $('body').removeClass("show_full_camera"); // disable cover camera
+              if(Site.render !== undefined){
+                cancelAnimationFrame(Site.render);
+              }
             }
 
             // instantiate slide camera

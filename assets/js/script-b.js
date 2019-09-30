@@ -30,6 +30,9 @@
                             if (st > lastScrollTop && st > navbarHeight){
                                 // Scroll Down
                                 document.getElementsByTagName("body")[0].className =  ('scroll');
+                                if(Site.render !== undefined){
+                                    cancelAnimationFrame(Site.render);
+                                }
                     
                             } else {
                                 // Scroll Up

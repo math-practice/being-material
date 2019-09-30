@@ -13,30 +13,15 @@ let classificationResults;
  * @param label_cutoffs - individual accuracy cutoffs (text lower than image) 
  */
 
-let Site = {};
 
 Site.undefinedCount = 0;
 Site.cameraView = "environment";
 Site.stream = true;
 Site.redirectStarted = false;
 
-Site.browserBanner = function(){
-  var siteBanner = document.querySelector("#camera_banner");
-  var bannerContents = document.querySelector("#camera_banner_contents");
-  siteBanner.classList.add("switchBrowsers");
-  bannerContents.innerHTML = "Please open this site in mobile Safari for a full experience...";
-}
-
-
-
-let googleStorageProtocol = "https";
-if (location.protocol !== "https:") {
-  googleStorageProtocol = "http";
-  console.log("switched to http");
-}
 
 var CONSTANTS = {
-    url_cloud_api : `${googleStorageProtocol}://storage.googleapis.com/04e86dd04c0411c711039770034830af/model.json`,
+    url_cloud_api : `${Site.googleStorageProtocol}://storage.googleapis.com/04e86dd04c0411c711039770034830af/model.json`,
     label_repeats : 3,
     label_cutoffs : {   'Grace_Leslie': 0.85,
                         'Evan_Ziporyn': 0.85,
@@ -75,29 +60,6 @@ const urls = {
   Arnold_Dreyblatt : 'audible/arnold-dreyblatt'
 }
 
-
-/*
- **
- Page Numbers:
-
-  Grace_Leslie p. 186
-  Evan_Ziporyn p. 190
-  Brendan_Landis p 173, 184, 190, 198
-  Azra_Aksamija p. 62, 193, 197
-  Tolini_Finamore p. 50-61, 197
-  Dewa_Alit
-  Maya_Beiser
-  Tal_Danino
-  Lucy_McRae
-  Hyphen_Labs
-  Nadya_Peek
-  Fry_Reas
-  Pawel_Romanczuk
-  Victor_Gama
-  Arnold_Dreyblatt
- */
-
-
 /* 
  * ObjectClassifier
  *
@@ -105,21 +67,6 @@ const urls = {
  * Handles the VideoStream, fetching of the Model as well as Classification 
  */
 
-Site.disableCamera = () =>{
-  console.log("quit camera", Site.classifier)
-  
-  if (navigator.mediaDevices.getUserMedia !== null) {
-   // still trying to stop video
-  }
-
-  if(Site.video){
-    Site.video.stop()
-    Site.video.remove() // remove input
-    Site.classifier.remove() // remove p5 instance
-  }
-  Site.stream = false;
-   // disable camera
-}
 
 
 const redirectPage = (resultSlug) => {
@@ -134,107 +81,6 @@ const redirectPage = (resultSlug) => {
     window.location.replace(base_url + "/" + urls[resultSlug]);
   }, 2500);
 }
-
-const domOutput = ( input, boolean, response ) => {
-    const bannerOutput = document.querySelector("#camera_banner_contents");
-    const pageLoader = document.querySelector("#page_loader");
-
-    if(bannerOutput !== undefined){
-      if(boolean && response){
-
-        if(!pageLoader.classList.contains("active")){
-          pageLoader.classList.add("active");
-          pageLoader.innerHTML = `<svg viewBox="60 0 320 330">
-            <path d="M 75, 75 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" fill="none" stroke="rgb(90,90,90)" stroke-width="150" stroke-dasharray="0 600 600 0" stroke-dashoffset="1000" transform="translate(75,75) rotate(90,100,100) ">
-              <animate attributeType="XML" attributeName="stroke-dashoffset" from="0" to="600" dur="2s" repeatCount="1" fill="freeze"/> 
-            </path>
-          </svg>`;
-        }
-        
-        bannerOutput.innerHTML = `${input}`;
-      }else if((boolean && Site.redirectStarted !== true) || Site.redirectStarted !== true){
-        bannerOutput.innerHTML = `${input}`;
-      }
-        
-    }
-}
-
-const cameraChecks = () => {
-
-  if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
-    console.log("enumerateDevices() not supported.");
-    // domOutput("enumerateDevices() not supported.")
-    Site.browserBanner();
-    return;
-  }
-
-  // List cameras and microphones:
-  navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    console.log(devices)
-    devices.forEach(function(device) {
-      
-      let output = device.kind + ": " + device.label + " id = " + device.deviceId;
-
-      console.log(output);
-
-    });
-  })
-  .catch(function(err) {
-    console.log(err.name + ": " + err.message);
-    // domOutput(err.name + ": " + err.message);
-  });
-
-}
-
-const CoverClassifier = ( sketch ) => {
-  let classifier;
-  Site.video;
-  let CurrObject;
-
-  /* Preload
-   * creates Video Stream
-   * fetches Models from Cloud
-   * assigns video size
-   */
-
-   domOutput("Welcome! Pull out the green insert and move it in front of the cover...");
-
-  sketch.preload = () => {
-      let videoObject = { 
-        video: { 
-          facingMode: { 
-            exact: Site.cameraView
-          } 
-        } 
-      };
-
-      if(!isMobile() || Site.cameraView === 'user'){ // fallback to use default when mobile device isn't accessible
-        videoObject = sketch.VIDEO;
-      }
-
-      Site.video = sketch.createCapture(videoObject);
-      Site.video.elt.setAttribute('playsinline', '');
-
-      console.log("site.video\n", Site.video)
-      cameraChecks()
-
-      Site.video.size(window.innerWidth, window.innerHeight);
-
-      // Optional : tests if the browser is mobile
-      console.log("is the browser mobile : " + isMobile());
-      if(!isMobile()){
-        alert("This is a Mobile Application, please switch to a Mobile Browser");
-      }
-  };
-
-  
-  // first classification, creates LabelObject
-  sketch.setup = () => {
-      sketch.rotate(sketch.PI);
-  };
-}
-
 
 const ObjectClassifier = ( sketch ) => {
 
@@ -268,7 +114,7 @@ const ObjectClassifier = ( sketch ) => {
         Site.video.elt.setAttribute('playsinline', '');
 
         console.log("site.video\n", Site.video)
-        cameraChecks()
+        Site.cameraChecks()
 
         classifier = ml5.imageClassifier(CONSTANTS.url_cloud_api);
         Site.video.size(window.innerWidth, window.innerHeight);
@@ -313,7 +159,7 @@ const ObjectClassifier = ( sketch ) => {
             if(results) {
                 createResultHTML();
                 console.log(classificationResults);
-                domOutput(classificationResults.label, true, true);
+                Site.domOutput(classificationResults.label, true, true);
                 if(Site.redirectStarted === false){
                   redirectPage(classificationResults.label);
                 }
@@ -322,8 +168,7 @@ const ObjectClassifier = ( sketch ) => {
             }else{
               Site.undefinedCount++;
               console.log(resultJSON)
-              domOutput("Analyzing...");
-              // domOutput("page unidentified,<br>label: " + resultJSON.label +", " + resultJSON.confidence + "<br>" + Site.undefinedCount, true);
+              Site.domOutput("Analyzing...");
             }
 
 
@@ -473,108 +318,3 @@ var resultJSON = {
                    repeats : null,
                    confidence : null
                  };
-
-
-
-/******************** 
-       TONE JS 
-*********************/
-
-
-Site.chords = {
-  Cmajor : ["C", "E", "G"],
-  Dminor : ["D", "F", "A"],
-  Eminor: ["E", "G", "G"],
-  Fmajor: ["F", "A", "C"],
-  Gmajor: ["G", "B", "D"],
-  Aminor: ["A", "C", "E"],
-  Bdiminshed : ["B", "D", "F"]
-};
-
-
-Site.chordArray = [
-  "Cmajor",
-  "Dminor",
-  "Eminor",
-  "Fmajor",
-  "Gmajor",
-  "Aminor",
-  "Bdiminshed"
-];
-
-
-Site.moveChord = (direction) => {
-  // direction false = down
-  // direction true = up
-  var targetChord,
-  indexToAdd,
-  targetChordIndex,
-  regions = document.querySelector("#regions"),
-  insertPlacement = (direction === true) ? 'afterbegin' : 'beforeend',
-  allRegions = document.querySelectorAll(".region");
-  if(allRegions === undefined){return;}
-
-  // check direction, and remove elements
-  if(direction === true){
-    targetChord = regions.lastElementChild.getAttribute("data-chord");
-
-    allRegions.forEach(function(thisRegion){
-      if(thisRegion.classList.contains(targetChord)){
-        thisRegion.remove();
-      }
-    });
-
-    targetChordIndex = Site.chordArray.indexOf(targetChord);
-
-    indexToAdd = (targetChordIndex - 3 >= 0) ? targetChordIndex - 3 : Site.chordArray.length + (targetChordIndex - 3);
-
-
-  }else{
-    targetChord = regions.firstElementChild.getAttribute("data-chord");
-
-    
-    allRegions.forEach(function(thisRegion){
-
-      if(thisRegion.classList.contains(targetChord)){
-        thisRegion.remove();
-      }
-    });
-
-    targetChordIndex = Site.chordArray.indexOf(targetChord);  
-
-    indexToAdd = (targetChordIndex + 3 <= Site.chordArray.length - 1) ? targetChordIndex + 3 : (targetChordIndex + 3) - (Site.chordArray.length);
-  }
-
-
-  var newChords = `
-    <button data-chord="${Site.chordArray[indexToAdd]}" class="region ${Site.chordArray[indexToAdd]}" onclick="Site.tones('${Site.chordArray[indexToAdd]}', 1)">${Site.chordArray[indexToAdd]}</button>
-    <button data-chord="${Site.chordArray[indexToAdd]}" class="region ${Site.chordArray[indexToAdd]}" onclick="Site.tones('${Site.chordArray[indexToAdd]}', 2)">${Site.chordArray[indexToAdd]}</button>
-    <button data-chord="${Site.chordArray[indexToAdd]}" class="region ${Site.chordArray[indexToAdd]}" onclick="Site.tones('${Site.chordArray[indexToAdd]}', 3)">${Site.chordArray[indexToAdd]}</button>
-    <button data-chord="${Site.chordArray[indexToAdd]}" class="region ${Site.chordArray[indexToAdd]}" onclick="Site.tones('${Site.chordArray[indexToAdd]}', 4)">${Site.chordArray[indexToAdd]}</button>
-    <button data-chord="${Site.chordArray[indexToAdd]}" class="region ${Site.chordArray[indexToAdd]}" onclick="Site.tones('${Site.chordArray[indexToAdd]}', 5)">${Site.chordArray[indexToAdd]}</button>
-  `;
-
-  regions.insertAdjacentHTML(insertPlacement, newChords);
-
-}
-
-Site.tones = (chord, note) => {
-
-  //create a synth and connect it to the master output (your speakers)
-  var synth = new Tone.Synth().toMaster();
-
-  synth.triggerAttackRelease(`${Site.chords[chord][0]}${note}`, '1n');
-  
-  setTimeout(function(){
-    synth.triggerAttackRelease(`${Site.chords[chord][1]}${(note < 3) ? note + 1 : note - 1}`, '1n');
-  }, 150)
-
-  setTimeout(function(){
-    synth.triggerAttackRelease(`${Site.chords[chord][2]}${(note < 3) ? note + 2 : note - 2}`, '1n');
-  }, 300)
-  
-}
-
-
-
-

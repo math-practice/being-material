@@ -15,32 +15,5 @@
     </div> 
   </a>
 	<div id="home_sketch"></div>
-
-  <div id="regions_wrapper">
-    <button onclick="Site.moveChord(false)" class="move_region" id="region_up" >Previous Chord</button>
-    <div id="regions">
-      
-      <button data-chord="Bdiminshed" class="region Bdiminshed" onclick="Site.tones('Bdiminshed', 1)">B diminished</button>
-      <button data-chord="Bdiminshed" class="region Bdiminshed" onclick="Site.tones('Bdiminshed', 2)">B diminished</button>
-      <button data-chord="Bdiminshed" class="region Bdiminshed" onclick="Site.tones('Bdiminshed', 3)">B diminished</button>
-      <button data-chord="Bdiminshed" class="region Bdiminshed" onclick="Site.tones('Bdiminshed', 4)">B diminished</button>
-      <button data-chord="Bdiminshed" class="region Bdiminshed" onclick="Site.tones('Bdiminshed', 5)">B diminished</button>
-
-      <button data-chord="Cmajor" class="region Cmajor" onclick="Site.tones('Cmajor', 1)">C Major</button>
-      <button data-chord="Cmajor" class="region Cmajor" onclick="Site.tones('Cmajor', 2)">C Major</button>
-      <button data-chord="Cmajor" class="region Cmajor" onclick="Site.tones('Cmajor', 3)">C Major</button>
-      <button data-chord="Cmajor" class="region Cmajor" onclick="Site.tones('Cmajor', 4)">C Major</button>
-      <button data-chord="Cmajor" class="region Cmajor" onclick="Site.tones('Cmajor', 5)">C Major</button>
-
-      <button data-chord="Dminor" class="region Dminor" onclick="Site.tones('Dminor', 1)">D Minor</button>
-      <button data-chord="Dminor" class="region Dminor" onclick="Site.tones('Dminor', 2)">D Minor</button>
-      <button data-chord="Dminor" class="region Dminor" onclick="Site.tones('Dminor', 3)">D Minor</button>
-      <button data-chord="Dminor" class="region Dminor" onclick="Site.tones('Dminor', 4)">D Minor</button>
-      <button data-chord="Dminor" class="region Dminor" onclick="Site.tones('Dminor', 5)">D Minor</button>
-      
-    </div>
-    <button onclick="Site.moveChord(true)" class="move_region" id="region_down" >Next Chord</button>
-
-  </div>
-	
+  <canvas id="photo_canvas"></canvas>
 </div>
