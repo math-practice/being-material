@@ -63,6 +63,10 @@
           <?php if ($about = page('about')): ?>
           <?php endif ?>
       </div>
+      <div class="credit col-2">
+        <p class="names">Site Credits:</p>
+        <p class="names">Interaction Design by Marcelo Coelho, E Roon Kang and Skylar Tibbits; Computer Vision and Machine Learning by Lukas Debiasi; Web Development by Lukas Eigler-Harding and Minkyung Kim; Soundscape designed by Evan Ziporyn</p>
+      </div>
     </div>
   </footer>
 <!-- Plyr resources and browser polyfills are specified in the pen settings -->

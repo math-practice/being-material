@@ -425,7 +425,11 @@
     }
     .credit {
       p {
+        margin-right: 1em;
         margin-bottom: 1em;
+        &.names {
+          opacity: 0.5;
+        }
       }
     }
     .intro .col-2 {
