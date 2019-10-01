@@ -74,7 +74,7 @@ const redirectPage = (resultSlug) => {
   // redirect commencing
   Site.redirectStarted = true;
 
-  console.log(resultSlug)
+  // console.log(resultSlug)
   var base_url = window.location.origin;
 
   setTimeout(function(){
@@ -84,7 +84,7 @@ const redirectPage = (resultSlug) => {
 
 const ObjectClassifier = ( sketch ) => {
 
-  console.log("sketch \n", sketch)
+  // console.log("sketch \n", sketch)
 
 
     let classifier;
@@ -113,7 +113,7 @@ const ObjectClassifier = ( sketch ) => {
         Site.video = sketch.createCapture(videoObject);
         Site.video.elt.setAttribute('playsinline', '');
 
-        console.log("site.video\n", Site.video)
+        // console.log("site.video\n", Site.video)
         Site.cameraChecks()
 
         classifier = ml5.imageClassifier(CONSTANTS.url_cloud_api);
@@ -148,7 +148,7 @@ const ObjectClassifier = ( sketch ) => {
             if(Site.stream === false){
               return;
             }
-            console.log(Site.stream)
+            // console.log(Site.stream)
 
             classifyVideo();    
             CurrObject.updateCurrObject(results[0]);
@@ -158,7 +158,7 @@ const ObjectClassifier = ( sketch ) => {
             // Optional: Dev and Log display
             if(results) {
                 createResultHTML();
-                console.log(classificationResults);
+                // console.log(classificationResults);
                 Site.domOutput(classificationResults.label, true, true);
                 if(Site.redirectStarted === false){
                   redirectPage(classificationResults.label);
@@ -167,7 +167,7 @@ const ObjectClassifier = ( sketch ) => {
                 
             }else{
               Site.undefinedCount++;
-              console.log(resultJSON)
+              // console.log(resultJSON)
               Site.domOutput("Analyzing...");
             }
 

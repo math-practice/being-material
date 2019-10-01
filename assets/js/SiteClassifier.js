@@ -269,14 +269,14 @@ Site.toggleCamera = () => {
   const cameraHomeButton = document.querySelector("#btn-camera");
   const cameraButton = document.querySelector("#book-btn");
   
-  if(cameraHomeButton !== undefined){
+  if(cameraHomeButton !== undefined && cameraHomeButton !== null){
     cameraHomeButton.addEventListener("click", () => {
       Site.startHomeVideo();
       Site.playAudio(false);
     });
   }
   
-  if(cameraButton !== undefined){
+  if(cameraButton !== undefined && cameraButton !== null){
     cameraButton.addEventListener("click", Site.startVideo);
   }
 }

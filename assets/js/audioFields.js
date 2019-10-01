@@ -56,12 +56,27 @@ Site.volumeAudio = (regions) => {
 
   Site.audioElements.forEach((audioElement, audioIndex) => {
   	var region = regions.filter((thisRegion) => thisRegion.label === coverList[audioIndex])
+  	// get region by name
 
   	if(region[0] === undefined){
   		audioElement.volume = 0;
   	}else{
   		// audioElement.volume = (region[0].confidence > 0.5) ? 0.9 : region[0].confidence/0.5;
-  		audioElement.volume = region[0].confidence;
+  		// basically need to sort by regions
+
+  		if(regions[0].label === region[0].label){
+  			audioElement.mute = false;
+  		}else if(regions[1].label === region[0].label){
+  			audioElement.mute = false;
+  		}else if(regions[2].label === region[0].label){
+  			audioElement.mute = false;
+  		}else{
+  			audioElement.mute = true;
+  		}
+
+  		// console.log(audioElement.volume)
+  		
+
   	}
   })
 }

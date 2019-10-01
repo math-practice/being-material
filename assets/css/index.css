@@ -304,7 +304,7 @@ body.slide {
 /* header: on scroll*/
 .scroll .header, #scroll-fix .header {
   height: 110px;
-  position: fixed;
+  /*position: fixed;*/
   margin: 0 auto;
   left: 50%;
   margin-left: -350px;
@@ -570,7 +570,7 @@ footer .credit {
 
 .particule {
   position: absolute;
-  font-family: "mg-r";
+  font-family: "mg-semi-mono", monospace;
   font-size: 0.6rem !important;
   object-fit: cover;
   pointer-events: none;
@@ -583,15 +583,17 @@ footer .credit {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   transform: scale(0);
-}
-
-img.particule{
-  box-shadow: 5px 20px 40px rgba(0,0,0,0.7);
-  border-radius: 500px;
-}
-
-div.particule{
   box-shadow: 0px 0px 0px rgba(0,0,0,0) !important;
   border-radius: 0 !important;
 }
+
+.particule img{
+  box-shadow: 5px 20px 40px rgba(0,0,0,0.7);
+}
+
+.particule span{
+  font-size: 0.5rem !important;
+}
+
+
 

@@ -39,7 +39,7 @@ Site.Bubbling = function(){
 
   Site.isBubbling = true;
 
-  var maxElements = 8;
+  var maxElements = (window.innerWidth < 768) ? 10 : 17;
   var duration = 5000;
   var toAnimate = [];
   var radius = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
@@ -50,18 +50,26 @@ Site.Bubbling = function(){
 
   var createElements = (function() {
     var fragment = document.createDocumentFragment();
+    
+    var randomImage = anime.random(0, Site.allImages.length - 1);
+
     for (var i = 0; i < maxElements; i++) {
 
-      if(Math.random() > 0.5){
-        var el = document.createElement('img');
-        el.classList.add('particule');
-        el.src = imgBaseUrl + Site.allImages[anime.random(1, Site.allImages.length - 1)].page + ".jpg";
-        el.style.borderRadius = anime.random(0, 1) * 500;
-      }else{
+      // if(Math.random() > 0.5){
         var el = document.createElement('div');
         el.classList.add('particule');
-        el.insertAdjacentHTML('afterbegin', Site.BubbleUnits.quotes[anime.random(0, Site.BubbleUnits.quotes.length - 1)]);
-      }
+        el.style.borderRadius = 0;
+        var thisImageIndex = (randomImage + i < Site.allImages.length - 1) ? (randomImage + i) : randomImage + i - Site.allImages.length + 1;
+        var elContents = `<img src="${imgBaseUrl + Site.allImages[thisImageIndex].page + ".jpg"}">
+        <span>p. ${Site.allImages[thisImageIndex].page}</span>`
+
+        el.insertAdjacentHTML('afterbegin', elContents);
+        
+      // }else{
+        // var el = document.createElement('div');
+        // el.classList.add('particule');
+        // el.insertAdjacentHTML('afterbegin', Site.BubbleUnits.quotes[anime.random(0, Site.BubbleUnits.quotes.length - 1)]);
+      // }
 
       toAnimate.push(el);
       fragment.appendChild(el);
@@ -69,9 +77,13 @@ Site.Bubbling = function(){
       
     }
     document.querySelector("#bubbles").appendChild(fragment);
-  })();
+  });
+
+  createElements();
 
   var animate = function(el, i) {
+
+    var iSpeed = (window.innerWidth > 768) ? 2 : 5;
 
     var angle = Math.random() * Math.PI * 2;
     anime({
@@ -82,7 +94,7 @@ Site.Bubbling = function(){
         {value: [0, 1], duration: 2000, easing: 'easeOutExpo'},
         {value: 0, duration: 4000, delay: duration - 4000, easing: 'easeInExpo'}
       ],
-      offset: (duration / maxElements) * (i*5),
+      offset: (duration / maxElements) * (i*iSpeed),
       duration: duration,
       easing: 'easeOutSine',
       loop: true

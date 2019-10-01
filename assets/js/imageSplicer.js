@@ -117,13 +117,19 @@ Site.fragmented = function(ctx, slice, vertical){
 			y = (j % 2 === 0) ? (slice.y - (height*((slice.i/slice.sliceAmount)*2))) : (slice.y + (height*((slice.i/slice.sliceAmount)*2)));
 		}
 		
-		ctx.drawImage(
-			slice.img, 
-			sx , sy, 
-			swidth, sheight,
-			x, y, 
-			width, height
-		);
+		if(slice.img.clear === true){
+			ctx.clearRect(x, y, width, height);
+		}else{
+			ctx.drawImage(
+				slice.img, 
+				sx , sy, 
+				swidth, sheight,
+				x, y, 
+				width, height
+			);
+		}
+
+		
 
 		// ctx.strokeRect( x, y, width, height );
 
@@ -142,13 +148,22 @@ Site.interval = setInterval(function(){
 
 }, 50)
 
-
 Site.renderLeft = function(ctx, img, sliceAmount, yPosition, canvas){
 	/* left column image rendering: */
+	
+	if (img === "clear"){
+		img = {};
+		img.clear = true;
+		img.height = canvas.height;
+		img.width = canvas.width;
+	}
+
 	for (var i = 0; i < sliceAmount; i++) {
 		var slicePosition = i*20;
 		var sinSlope = Math.sin((Math.PI*(i/sliceAmount))/2);
 		var imgCanvasSliceProportion = (10*canvas.height)/img.height;
+
+
 
 		var slice = {
 			i: i,
@@ -179,6 +194,14 @@ Site.renderLeft = function(ctx, img, sliceAmount, yPosition, canvas){
 
 Site.renderRight = function(ctx, img, sliceAmount, yPosition, canvas){
 	/* right column image rendering: */
+
+	if (img === "clear"){
+		img = {};
+		img.clear = true;
+		img.height = canvas.height;
+		img.width = canvas.width;
+	}
+
 	for (var i = 0; i < sliceAmount; i++) {
 		var startingPoint = sliceAmount - i;
 		var slicePosition = startingPoint*20;
@@ -408,7 +431,33 @@ Site.updateFields = function(coverClassificationResults){
 	if(Site.coverPositions[coverClassificationResults.label] !== undefined){
 		var currentRegion = Site.coverPositions[coverClassificationResults.label][0];
 		if( currentRegion !== null){
-			Site.domOutput(`Source: p. ${Images[currentRegion].info.page}, ${Images[currentRegion].info.name}`)
+			Site.domOutput(`Source: p. ${Images[currentRegion].info.page}, ${Images[currentRegion].info.name}`);
+
+			if(Site.timerClearDrawing !== undefined && currentRegion !== Site.currentRegion){
+				clearTimeout(Site.timerClearDrawing);
+			}
+
+			if(Site.clearingDrawing !== true){
+				Site.clearingDrawing = true;
+				Site.timerClearDrawing = setTimeout(function(){
+					if(Site.globalCanvas === undefined){ return; }
+
+					console.log("\nCanvas reset\n\n");
+					var glbCtx = Site.globalCanvas.getContext("2d");
+
+					glbCtx.drawImage(
+						Images[Site.currentRegion].img,
+						0, 0, 
+						Site.globalCanvas.width, Site.globalCanvas.height
+					);
+
+					Site.renderLeft(glbCtx, Images[Site.currentRegion].img, 70, 0, Site.globalCanvas);
+					Site.clearingDrawing = false;
+				}, 10000)
+			}
+
+			
+
 		}else{
 			
 			Site.domOutput("Clearing drawing... Continue moving the green insert in front of the cover...");
@@ -422,6 +471,7 @@ Site.updateFields = function(coverClassificationResults){
 }
 
 Site.start = function(canvas) {
+  Site.globalCanvas = canvas;
   Site.resize(canvas);
   var ctx = canvas.getContext("2d");
   canvas.style.background = "rgba(0,255,0,0)";
@@ -438,7 +488,10 @@ Site.start = function(canvas) {
   		
   	}else if(Site.currentRegion === null){
   		img = null;
-  		ctx.clearRect(0, 0, canvas.width, canvas.height);
+  	
+  		// ctx.clearRect(0, 0, canvas.width, canvas.height);
+  		Site.renderRight(ctx, "clear", 30, 0, canvas);
+  		Site.renderLeft(ctx, "clear", 30, 0, canvas);
   	}
 
   	// 
