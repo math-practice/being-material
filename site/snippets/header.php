@@ -13,12 +13,14 @@
   <?= css(['assets/css/index.css']) ?>
   <link rel='stylesheet' href='https://unpkg.com/plyr@3/dist/plyr.css'>
   <!--vanilla js and custom css-->
+  <?= js(['assets/js/anime.min.js']) ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <?= css(['@auto']) ?>
   <?= snippet('objectClassifier/objectClassifierHeader') ?>
 </head>
 <body>
   <?php snippet('objectClassifier/objectClassifierBanner') ?>
+  <?php snippet('homeAnimation') ?>
   <div id="view">
     <?php snippet('objectClassifier/objectClassifier') ?>
     <a id="btn-close" class="btn">

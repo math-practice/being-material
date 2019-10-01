@@ -1,5 +1,4 @@
 <?php snippet('header') ?>
-
 <main>
   <div class="intro">
     <div class="col-2"></div>

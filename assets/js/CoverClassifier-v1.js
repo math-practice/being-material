@@ -20,32 +20,32 @@ var COVERCONSTANTS = {
 
     cover_label_repeats : 1,
     page_cutoffs : {    
-                        'No_Cover' : 0.40,
-                        'Cover_Covered' : 0.50,
+                      'No_Cover' : 0.40,
+                      'Cover_Covered' : 0.50,
 
-                        'Cover_Bottom_1' : 0.50,
-                        'Cover_Bottom_2' : 0.80,
+                      'Cover_Bottom_1' : 0.50,
+                      'Cover_Bottom_2' : 0.80,
 
-                        'Cover_Bottom_R1' : 0.50,
-                        'Cover_Bottom_R2' : 0.95,
+                      'Cover_Bottom_R1' : 0.50,
+                      'Cover_Bottom_R2' : 0.95,
 
-                        'Cover_Bottom_L1' : 0.50,
-                        'Cover_Bottom_L2' : 0.50,
+                      'Cover_Bottom_L1' : 0.50,
+                      'Cover_Bottom_L2' : 0.50,
 
-                        'Cover_Mid_R1' : 0.80,
-                        'Cover_Mid_R2' : 0.50,
+                      'Cover_Mid_R1' : 0.80,
+                      'Cover_Mid_R2' : 0.50,
 
-                        'Cover_Mid_L1' : 0.50,
-                        'Cover_Mid_L2' : 0.50,
+                      'Cover_Mid_L1' : 0.50,
+                      'Cover_Mid_L2' : 0.50,
 
-                        'Cover_Top_1' : 0.50,
-                        'Cover_Top_2' : 0.95,
+                      'Cover_Top_1' : 0.50,
+                      'Cover_Top_2' : 0.95,
 
-                        'Cover_Top_R1' : 0.50,
-                        'Cover_Top_R2' : 0.50,
+                      'Cover_Top_R1' : 0.50,
+                      'Cover_Top_R2' : 0.50,
 
-                        'Cover_Top_L1' : 0.50,
-                        'Cover_Top_L2' : 0.50
+                      'Cover_Top_L1' : 0.50,
+                      'Cover_Top_L2' : 0.50
 
                     }
 };
@@ -123,11 +123,14 @@ const CoverClassifier = ( sketch ) => {
         }else{
             classifyVideo();    
 
+            Site.volumeAudio(results);
             CurrObject.updateCurrObject(results[0]);
 
             var results = CurrObject.pagesCutoffUpdater(COVERCONSTANTS.cover_label_repeats);
 
             if (results) coverClassificationResults = coverResultJSON;
+
+
 
 
             // Optional: Dev and Log display

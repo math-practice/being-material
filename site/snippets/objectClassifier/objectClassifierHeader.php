@@ -8,6 +8,7 @@
 	'assets/js/SiteClassifier.js',
 	'assets/js/ObjectClassifier-v1.js',
 	'assets/js/CoverClassifier-v1.js',
+	'assets/js/audioFields.js',
 	'assets/js/imageSplicer.js'
 ]) ?>
 
