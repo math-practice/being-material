@@ -113,14 +113,23 @@
       @include tablet { font-size: $body;}
     }
 
-  
+    .header h3 {
+      margin: 96px 0 0 50%;
+      width: 50%;
+      position:absolute;
+      @include mobile { display: none;}
+    }
+    .scroll .header h3 {
+      display:none;
+    }
+
     h3 {
       font-family:'mg-semi-mono', monospace;
-      font-size: $h3;
+      font-size: 16px;
       font-weight: normal;
       span.name {
         display: inline-block;
-        font-size: 0.9em;
+        font-size: 16px;
       }
     }
     
@@ -190,7 +199,7 @@
     /* header */
 
     .header {
-      position:relative;
+      position:absolute;
       top:0;
       left:0;
       display: flex;
@@ -361,7 +370,7 @@
 
 
     #scroll-fix.no-scroll .header {
-      position:relative;
+      position:absolute;
     }
 
     

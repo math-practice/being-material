@@ -52,6 +52,16 @@
       <path class="fill"  d="M23.3,4l-4.8,2.8v6.4l4.8,2.8c0.3,0.2,0.7,0,0.7-0.4V4.4C24,4,23.6,3.8,23.3,4z"/>
       </svg>
     </a>
+    <h3>
+      Edited by 
+      <span class="name">Marie-Pier Boucher,</span>
+      <span class="name">Stefan Helmreich,</span>
+      <span class="name">Leila W. Kinney,</span>
+      <span class="name">Skylar Tibbits,</span>
+      <span class="name">Rebecca Uchill, </span>
+      and
+      <span class="name">Evan Ziporyn</span>
+    </h3>
   </header>
   <div class="page" class='step' data-step='1'>
 

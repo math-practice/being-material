@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <main>
   <div class="intro">
-    <div class="col-2"></div>
+    <!-- <div class="col-2"></div>
     <div class="col-2">
         <h3>
         Edited by 
@@ -13,7 +13,7 @@
         and
         <span class="name">Evan Ziporyn</span>
         </h3>
-    </div>
+    </div> -->
     <!-- <div id="gallery">
       <div></div>
       <div></div>
