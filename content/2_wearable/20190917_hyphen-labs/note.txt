@@ -1,8 +1,4 @@
-<<<<<<< HEAD:content/2_wearable/20190917_hyphen-labs/note.txt
-Title: Hyphen Labs
-=======
 Title: Hyphen-Labs
->>>>>>> 127904e12402d4e51fc696f2f2bd5c6d28e6c719:content/2_wearable/20190917_hyphen-labs/note.txt
 
 ----
 
