@@ -4,7 +4,7 @@ Title: Maya Beiser
 
 Text:
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-1.mp4">
 </video>
 

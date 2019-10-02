@@ -4,7 +4,7 @@ Title: Azra Akšamija
 
 Text:
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-3%20Aksamija/Aksamija_online_materials_2-3-1.mov">
 </video>
 

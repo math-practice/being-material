@@ -4,7 +4,7 @@ Title: Lucy McRae
 
 Text:
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-8%20McRae/McRae_online_materials_2-7-1.mov">
 </video>
 
@@ -27,7 +27,7 @@ A Lucy McRae film commissioned by Misschu Australia, est. 2007<br>
 </figcaption>
 
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-8%20McRae/McRae_online_materials_2-7-2.mp4">
 </video>
 

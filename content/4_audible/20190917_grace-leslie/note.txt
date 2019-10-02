@@ -17,7 +17,7 @@ Text:
 </p>
 </figcaption>
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Audible/5-7%20Leslie/Leslie_online_materials_5-7-2.mp4">
 </video>
 
