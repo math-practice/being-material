@@ -370,6 +370,12 @@ body.slide {
   margin: 0 auto; }
 
 /*column layout*/
+.col-1 {
+  font-size: 0.6rem !important; }
+  .col-1 p {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important; }
+
 .col-2 {
   position: relative;
   padding: 0 0.5rem;
@@ -493,6 +499,12 @@ figcaption {
 
 .text figcaption p {
   margin-bottom: .3rem; }
+
+article {
+  margin-top: 128px; }
+
+p.quotes {
+  margin-left: 2em !important; }
 
 /*media*/
 video {

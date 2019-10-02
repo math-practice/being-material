@@ -405,6 +405,13 @@
     }
 
     /*column layout*/
+    .col-1 {
+      font-size: 0.6rem !important;
+      p {
+        margin-top: 1em !important;
+        margin-bottom: 1em !important;
+      }
+    }
     .col-2 {
       position: relative;
       padding:0 $p-m;
@@ -516,8 +523,12 @@
  .text figcaption p {
    margin-bottom: .3rem;
   }
-
-
+  article {
+    margin-top: 128px;
+  }
+  p.quotes {
+    margin-left: 2em !important;
+  }
   /*media*/
 
   video {

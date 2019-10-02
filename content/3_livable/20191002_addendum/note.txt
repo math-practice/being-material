@@ -1,0 +1,33 @@
+Title: Rebecca Uchill and Stefan Helmreich
+
+----
+
+Text:
+
+<div class="col-1">
+The Livable section of Being Material asks after new modes of working with and thinking about biological and ecosocial materials in art, science, humanities, activism, and beyond. The word Livable also refers to the material conditions under which we live: social, political, cultural, and financial.
+
+All of those conditions shape today’s tech worlds, worlds whose aspirations to techno-utopian digital transcendence are too often accompanied by practices of exclusion—particularly of women, people of color, and LGBTQIA+ communities. That fact has become stark at MIT, the institution through which we organized the Being Material symposium in 2017 and subsequently edited a book that emerged from it, which was printed in July, 2019; this web site is an online extension of the book. In fall 2019, we learned that MIT personnel had accepted funding from a known pedophile and sexual predator, a fact that not only revealed a disregard for the lives of sexual assault survivors, but also underscored the normalized misogyny and exploitation within so many tech circuits of fundraising, networking, and innovation. Many MIT community members spoke out:
+
+<p class="quotes">
+(link: https://concernedatmit.weebly.com/ text: https://concernedatmit.weebly.com/)
+(link: https://thetech.com/2019/09/26/nothing-wrong-taking-money text: https://thetech.com/2019/09/26/nothing-wrong-taking-money)
+(link: https://thetech.com/2019/09/26/letter-mit-community-donations text: https://thetech.com/2019/09/26/letter-mit-community-donations)
+</p>
+ 
+Around the same time, funding from the Koch Brothers, noted supporters of climate change denial, came under fresh scrutiny. Some MIT students offered a timely hack, as this website went live, calling for better thinking about the politics of fundraising and the livability of possible futures: (link: https://mitadmissions.org/blogs/entry/futility-island/ text: https://mitadmissions.org/blogs/entry/futility-island/).
+ 
+We hope to bear witness to and confront the failures of so many tech projects to honor and support the lives of exploited and marginalized people. We also hope that Being Material can operate as an intervention, as a force for asking better questions about what it will take to make our material lives Livable.
+</div>
+
+----
+
+Gallery: 
+
+----
+
+Subtitle: Addendum
+
+----
+
+Category: Livable
