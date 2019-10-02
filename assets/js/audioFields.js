@@ -28,7 +28,7 @@ Site.playAudio = (playing) => {
 
 };
 
-Site.volumeAudio = (regions) => {
+Site.volumeAudio = (regions, isolated) => {
   if(regions === undefined){return};
   
   var amountOfReturnedRegions = regions.length;
@@ -63,20 +63,31 @@ Site.volumeAudio = (regions) => {
   	// get region by name
 
   	if(region[0] === undefined){
-  		audioElement.volume = 0;
+  		audioElement.muted = true;
   	}else{
   		// audioElement.volume = (region[0].confidence > 0.5) ? 0.9 : region[0].confidence/0.5;
   		// basically need to sort by regions
 
-  		if(regions[0].label === region[0].label){
-  			audioElement.muted = false;
-  		}else if(regions[1].label === region[0].label){
-  			audioElement.muted = false;
-  		}else if(regions[2].label === region[0].label){
-  			audioElement.muted = false;
+  		if(isolated === true){
+  			if(regions[0].label === region[0].label){
+	  			audioElement.muted = false;
+	  		}else{
+	  			audioElement.muted = true;
+	  		}
+  			
   		}else{
-  			audioElement.muted = true;
+  			if(regions[0].label === region[0].label){
+	  			audioElement.muted = false;
+	  		}else if(regions[1].label === region[0].label){
+	  			audioElement.muted = false;
+	  		}else if(regions[2].label === region[0].label){
+	  			audioElement.muted = false;
+	  		}else{
+	  			audioElement.muted = true;
+	  		}
   		}
+
+  		
 
   		// console.log(audioElement.volume)
   		

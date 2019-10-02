@@ -114,9 +114,9 @@ Site.pauseBubbling = function(noBubbles){
     if(noBubbles === true){
       
       bubbleContainer.classList.add("inactive");
-      setTimeout(function(){
-        bubbleContainer.innerHTML = ""; // remove bubbles
-      }, 1000)
+      
+      bubbleContainer.innerHTML = ""; // remove bubbles
+      
 
       Site.isBubbling = false;
 

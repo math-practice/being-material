@@ -177,19 +177,15 @@ Site.renderLeft = function(ctx, img, sliceAmount, yPosition, canvas, horiziontal
 			
 			ctx.drawImage(
 				slice.img, 
-				slicePosition , slice.sy, 
-				30, slice.sheight,
+				slicePosition, slice.sy, 
+				20, slice.sheight,
 				slicePosition, 0, 
-				30, slice.height
+				(20*slice.width)/img.width, slice.height
 			);
 
 		}	
 
-		
 			Site.fragmented(ctx, slice, true);
-		
-		
-
 	}
 }
 
@@ -443,30 +439,36 @@ Site.updateFields = function(coverClassificationResults){
 			if(Site.clearingDrawing !== true){
 				Site.clearingDrawing = true;
 				Site.timerClearDrawing = setTimeout(function(){
-					// setTimeout to update canvas with clear image of drawing
+					// setTimeout to update canvas with almost-full image of drawing
 					if(Site.globalCanvas === undefined){ return; }
 
 					console.log("\nCanvas reset\n\n");
 					var glbCtx = Site.globalCanvas.getContext("2d");
 
-					// option 1:
-					// draw full current image and then a drag immediatly on top
-					// glbCtx.drawImage(
-					// 	Images[Site.currentRegion].img,
-					// 	0, 0, 
-					// 	Site.globalCanvas.width, Site.globalCanvas.height
-					// );
-					// Site.renderLeft(glbCtx, Images[Site.currentRegion].img, 70, 0, Site.globalCanvas);
-					// render but without horiziontal splicing
-					Site.renderLeft(glbCtx, Images[Site.currentRegion].img, 70, 0, Site.globalCanvas, true);
+					var firstResult = [coverClassificationResults];
 
-					// site.renderLeft but only with clearing
-					// Site.renderRight(glbCtx, "clear", 70, 0, Site.globalCanvas);
+					Site.volumeAudio(firstResult, true); // set audio isolation
 
+					var timeoutCounter = 0;
+					for (var i = 0; i < 11; i++) {
+						setTimeout(function(){
+							timeoutCounter++;
 
+							if(timeoutCounter === 10){
+								glbCtx.drawImage(
+									Images[Site.currentRegion].img,
+									0,0, Site.globalCanvas.width, Site.globalCanvas.height);
+								Site.renderLeft(glbCtx, Images[Site.currentRegion].img, 10, 0, Site.globalCanvas);
+							}else{
+								Site.renderLeft(glbCtx, Images[Site.currentRegion].img, Math.round(timeoutCounter*(70/10)), 0, Site.globalCanvas, true);
+							}
+
+						}, i*125)
+
+					}
 
 					Site.clearingDrawing = false;
-				}, 9000)
+				}, 10000)
 			}
 
 			
@@ -503,8 +505,8 @@ Site.start = function(canvas) {
   		img = null;
   	
   		// ctx.clearRect(0, 0, canvas.width, canvas.height);
-  		Site.renderRight(ctx, "clear", 30, 0, canvas);
-  		Site.renderLeft(ctx, "clear", 30, 0, canvas);
+  		Site.renderRight(ctx, "clear", 40, 0, canvas);
+  		Site.renderLeft(ctx, "clear", 40, 0, canvas);
   	}
 
   	// 
