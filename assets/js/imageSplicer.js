@@ -174,25 +174,20 @@ Site.renderLeft = function(ctx, img, sliceAmount, yPosition, canvas, horiziontal
 		}
 
 		if(horiziontalSplicing === true){
+			
 			ctx.drawImage(
 				slice.img, 
-				slice.sx , slice.sy, 
-				slice.swidth, slice.sheight,
-				slice.x, 0, 
-				slice.width, slice.height
+				slicePosition , slice.sy, 
+				30, slice.sheight,
+				slicePosition, 0, 
+				30, slice.height
 			);
 
-			ctx.drawImage(
-				slice.img, 
-				slice.sx - 20 , slice.sy, 
-				slice.swidth, slice.sheight,
-				slice.x - 20, -10, 
-				slice.width, slice.height
-			);
+		}	
 
-		}else{
+		
 			Site.fragmented(ctx, slice, true);
-		}
+		
 		
 
 	}

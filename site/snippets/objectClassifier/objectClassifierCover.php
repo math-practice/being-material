@@ -18,7 +18,7 @@
   <canvas id="photo_canvas"></canvas>
   <div id="audio_tags">
     <?php for ($i=1; $i < 18; $i++): ?>
-    <audio class="soundscape"  id="<?= 'soundscape_'.($i - 1) ?>" loop >
+    <audio class="soundscape"  id="<?= 'soundscape_'.($i - 1) ?>" loop mute="true" >
       <source src="<?= $site->url() ?>/assets/m4a/<?= $i ?>.m4a" type="audio/m4a">
       <source src="<?= $site->url() ?>/assets/wav/<?= $i ?>.wav" type="audio/wav">
     </audio>

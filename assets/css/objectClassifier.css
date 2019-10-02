@@ -59,8 +59,8 @@
   transform: scale(1,1) translateX(-50%);
   width: 100% !important;
   height: 100% !important;
-  -webkit-filter: grayscale(100%) contrast(5000%);
-  filter: grayscale(100%) contrast(5000%);
+  -webkit-filter: grayscale(100%) contrast(500%);
+  filter: grayscale(100%) contrast(500%);
 }
 
 #dom_results_wrapper{

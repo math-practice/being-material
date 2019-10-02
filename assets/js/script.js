@@ -60,7 +60,7 @@ Site.Bubbling = function(){
         el.classList.add('particule');
         el.style.borderRadius = 0;
         var thisImageIndex = (randomImage + i < Site.allImages.length - 1) ? (randomImage + i) : randomImage + i - Site.allImages.length + 1;
-        var elContents = `<img src="${imgBaseUrl + Site.allImages[thisImageIndex].page + ".jpg"}">
+        var elContents = `<div class="part_img" style="background-image: url(${imgBaseUrl + Site.allImages[thisImageIndex].page + ".jpg"});"></div>
         <span>p. ${Site.allImages[thisImageIndex].page}</span>`
 
         el.insertAdjacentHTML('afterbegin', elContents);
