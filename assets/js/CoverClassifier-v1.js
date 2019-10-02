@@ -82,6 +82,7 @@ const CoverClassifier = ( sketch ) => {
             } 
         };
 
+        Site.domOutput("Loading cover model...");
 
         if(!isMobile() || Site.cameraView === 'user'){ // fallback to use default when mobile device isn't accessible
             videoObject = sketch.VIDEO;

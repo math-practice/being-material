@@ -186,7 +186,15 @@ Site.disableCamera = () => {
     Site.video.stop()
     Site.video.remove() // remove input
     Site.classifier.remove() // remove p5 instance
+
   }
+
+  if(Site.coverVideo){
+    Site.coverVideo.stop()
+    Site.coverVideo.remove()
+    Site.coverClassifier.remove()
+  }
+
   Site.stream = false;
    // disable camera
 }
@@ -246,16 +254,24 @@ Site.cameraChecks = () => {
 Site.startVideo = () => {
   // quit cover
   Site.quitCover = true;
+  if(Site.coverVideo){
+    Site.coverVideo.stop();
+    Site.coverVideo.remove();
+    Site.coverClassifier.remove();
+  }
+
 
   // start page searching (ObjectClassifier)
+  Site.domOutput("Page model selected...");
   Site.classifier = new p5( ObjectClassifier, 'sketch');
   const banner = document.querySelector("#camera_banner");
   banner.classList.add("active");
+  
 }
 
 Site.startHomeVideo = () => {
   Site.quitCover = false;
-  Site.classifier = new p5( CoverClassifier, 'home_sketch');
+  Site.coverClassifier = new p5( CoverClassifier, 'home_sketch');
   const banner = document.querySelector("#camera_banner");
   banner.classList.add("active");
 

@@ -85,7 +85,7 @@ const redirectPage = (resultSlug) => {
 const ObjectClassifier = ( sketch ) => {
 
   // console.log("sketch \n", sketch)
-
+  Site.domOutput("Loading page model...");
 
     let classifier;
     Site.video;

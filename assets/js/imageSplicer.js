@@ -62,11 +62,10 @@ Site.interTargetClientX = 0;
 Site.interPreviousClientX = 0;
 Site.interCurrentClientX = 0;
 
-Site.interEasing = false;
+Site.interEasing = false; // between distinct regions
 
 Site.currentRegion = null;
 Site.previousRegion = null;
-
 
 Site.incrementer = 0;
 
@@ -108,13 +107,13 @@ Site.fragmented = function(ctx, slice, vertical){
 
 		}else if(vertical === false){
 			// crop
-			sx = 0 + (slice.swidth* (j/slices));
-			swidth = slice.swidth/slices;
+			// sx = 0 + (slice.swidth* (j/slices));
+			// swidth = slice.swidth/slices;
 			
 			//placement
-			x = (slice.width* (j/slices))*1.1 + rain;
-			width = (j === 0)  ? (slice.width/slices) : ((slice.width/1.1)/slices);
-			y = (j % 2 === 0) ? (slice.y - (height*((slice.i/slice.sliceAmount)*2))) : (slice.y + (height*((slice.i/slice.sliceAmount)*2)));
+			// x = (slice.width* (j/slices))*1.1 + rain;
+			// width = (j === 0)  ? (slice.width/slices) : ((slice.width/1.1)/slices);
+			// y = (j % 2 === 0) ? (slice.y - (height*((slice.i/slice.sliceAmount)*2))) : (slice.y + (height*((slice.i/slice.sliceAmount)*2)));
 		}
 		
 		if(slice.img.clear === true){
@@ -128,11 +127,6 @@ Site.fragmented = function(ctx, slice, vertical){
 				width, height
 			);
 		}
-
-		
-
-		// ctx.strokeRect( x, y, width, height );
-
 	}
 }
 
@@ -433,13 +427,16 @@ Site.updateFields = function(coverClassificationResults){
 		if( currentRegion !== null){
 			Site.domOutput(`Source: p. ${Images[currentRegion].info.page}, ${Images[currentRegion].info.name}`);
 
-			if(Site.timerClearDrawing !== undefined && currentRegion !== Site.currentRegion){
+
+			if(Site.currentRegion !== currentRegion && Site.timerClearDrawing){
 				clearTimeout(Site.timerClearDrawing);
+				Site.clearingDrawing = false;
 			}
 
 			if(Site.clearingDrawing !== true){
 				Site.clearingDrawing = true;
 				Site.timerClearDrawing = setTimeout(function(){
+					// setTimeout to update canvas with clear image of drawing
 					if(Site.globalCanvas === undefined){ return; }
 
 					console.log("\nCanvas reset\n\n");
@@ -453,7 +450,7 @@ Site.updateFields = function(coverClassificationResults){
 
 					Site.renderLeft(glbCtx, Images[Site.currentRegion].img, 70, 0, Site.globalCanvas);
 					Site.clearingDrawing = false;
-				}, 10000)
+				}, 9000)
 			}
 
 			
@@ -558,6 +555,9 @@ Site.start = function(canvas) {
    		
   	if(Site.quitCover !== true){
   		requestAnimationFrame(render);
+  	}else{
+  		if(document.querySelector("#home_sketch video") !== null ) { document.querySelector("#home_sketch video").remove(); }
+  		if(document.querySelector("#home_sketch canvas") !== null ) { document.querySelector("#home_sketch canvas").remove(); }
   	}
 	}
   requestAnimationFrame(render);

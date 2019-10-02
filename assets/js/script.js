@@ -39,7 +39,7 @@ Site.Bubbling = function(){
 
   Site.isBubbling = true;
 
-  var maxElements = (window.innerWidth < 768) ? 10 : 17;
+  var maxElements = (window.innerWidth < 768) ? 10 : 13;
   var duration = 5000;
   var toAnimate = [];
   var radius = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
@@ -76,7 +76,9 @@ Site.Bubbling = function(){
 
       
     }
-    document.querySelector("#bubbles").appendChild(fragment);
+    if(document.querySelector("#bubbles") !== null && document.querySelector("#bubbles") !== undefined){
+        document.querySelector("#bubbles").appendChild(fragment);
+    }
   });
 
   createElements();
@@ -106,10 +108,8 @@ Site.Bubbling = function(){
 
 
 Site.pauseBubbling = function(noBubbles){
-  console.log("bubbles", noBubbles)
-
     var bubbleContainer = document.querySelector("#bubbles");
-    if(bubbleContainer === undefined){return;}
+    if(bubbleContainer === undefined || bubbleContainer === null){return;}
 
     if(noBubbles === true){
       

@@ -1,5 +1,9 @@
 /*
+ *
+ *
  * Audio Functions (homepage)
+ *
+ *
  */
 
 
@@ -65,13 +69,13 @@ Site.volumeAudio = (regions) => {
   		// basically need to sort by regions
 
   		if(regions[0].label === region[0].label){
-  			audioElement.mute = false;
+  			audioElement.muted = false;
   		}else if(regions[1].label === region[0].label){
-  			audioElement.mute = false;
+  			audioElement.muted = false;
   		}else if(regions[2].label === region[0].label){
-  			audioElement.mute = false;
+  			audioElement.muted = false;
   		}else{
-  			audioElement.mute = true;
+  			audioElement.muted = true;
   		}
 
   		// console.log(audioElement.volume)
