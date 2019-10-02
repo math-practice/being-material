@@ -128,7 +128,7 @@ Site.pauseBubbling = function(noBubbles){
 }
 
 $( document ).ready(function() {
-
+  showQuotes();
       Site.Bubbling(); // start bubbles
 
     /*  =========================================================================
@@ -212,139 +212,37 @@ $( document ).ready(function() {
 
          }
 
-
-
-    /*  =========================================================================
-        WIP: Navigation: ScrollMa
-        ==========================================================================   */
-
-        // var container = document.querySelector('.scroll');
-        // var text = container.querySelector('.scroll__text');
-        // var steps = text.querySelectorAll('.step');
-
-        // // initialize the scrollama
-        // var scroller = scrollama();
-
-        // // scrollama event handlers
-        // function handleStepEnter(response) {
-        //     // response = { element, direction, index }
-        //     console.log(response.index, '-------- enter');
-        //     // add to color to current step
-        //     response.element.classList.add('is-active');
-        // }
-
-        // function handleStepExit(response) {
-        //     // response = { element, direction, index }
-        //     console.log(response.index, '-------- exit');
-        //     // remove color from current step
-        //     response.element.classList.remove('is-active');
-        // }
-
-        // function handleStepProgress(response) {
-        //     // response = { element, progress, index }
-        //     console.log(response.index, '-------- progress -', response.progress);
-        // }
-
-        // function init() {
-        //     // set random padding for different step heights (not required)
-        //     steps.forEach(function (step) {
-        //         // var v = 100 + Math.floor(Math.random() * window.innerHeight / 4);
-        //         // step.style.padding = v + 'px 0px';
-        //         // step.style.height = '300px';
-        //     });
-
-        //     // 1. setup the scroller with the bare-bones options
-        //     // this will also initialize trigger observations
-        //     // 3. bind scrollama event handlers (this can be chained like below)
-        //     scroller.setup({
-        //         step: '.scroll__text .step',
-        //         debug: true,
-        //         offset: 0.2,
-        //         // progress: true,
-        //     })
-        //         .onStepEnter(handleStepEnter)
-        //         .onStepExit(handleStepExit)
-        //         // .onStepProgress(handleStepProgress)
-
-        //     // setup resize event
-        //     window.addEventListener('resize', scroller.resize);
-        // }
-
-        // // kick things off
-        // init();
-
-
-
-    /*  =========================================================================
-        WIP: Camera: make #view div draggable on desktop
-        ==========================================================================   */
-        // if ($(window).width() <= 1025) {
-        //         // Make the DIV element draggable:
-        //         dragElement(document.getElementById("view"));
-
-        //         function dragElement(elmnt) {
-        //         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-        //         if (document.getElementById(elmnt.id + "header")) {
-        //             // if present, the header is where you move the DIV from:
-        //             document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-        //         } else {
-        //             // otherwise, move the DIV from anywhere inside the DIV: 
-        //             elmnt.onmousedown = dragMouseDown;
-        //         }
-
-        //         function dragMouseDown(e) {
-        //             e = e || window.event;
-        //             e.preventDefault();
-        //             // get the mouse cursor position at startup:
-        //             pos3 = e.clientX;
-        //             pos4 = e.clientY;
-        //             document.onmouseup = closeDragElement;
-        //             // call a function whenever the cursor moves:
-        //             document.onmousemove = elementDrag;
-        //         }
-
-        //         function elementDrag(e) {
-        //             e = e || window.event;
-        //             e.preventDefault();
-        //             // calculate the new cursor position:
-        //             pos1 = pos3 - e.clientX;
-        //             pos2 = pos4 - e.clientY;
-        //             pos3 = e.clientX;
-        //             pos4 = e.clientY;
-        //             // set the element's new position:
-        //             elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        //             elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-        //         }
-
-        //         function closeDragElement() {
-        //             // stop moving when mouse button is released:
-        //             document.onmouseup = null;
-        //             document.onmousemove = null;
-        //         }
-        //         }
-        // }
-
-    /*  =========================================================================
-        TBD: Display images
-        ==========================================================================   */
-        // function getRandomImg(max) {
-        //     random = Math.floor(Math.random() * Math.floor(max));
-
-        //     var set = ['img1', 'img2', 'img3', 'img4'];
-        //     var imageNum;
-
-        //     // choose the image name
-        //     var randomSet = set[Math.floor(Math.random() * set.length)];
-
-        //     // choose the res
-        //     if(random <= 3) { imageNum = 3}
-        //     if(random > 3 && random <= 6 ) { imageNum = 2}
-        //     if(random > 6 && random <= 9 ) { imageNum = 1}
-
-
-        //     // adjust the html
-        //     $('#gallery').css('background-image', 'url(' +randomPixel+'/'+randomSet+'-'+imageNum+'.jpg'+')')
-        // }
+         function showQuotes(){
+          var quotes = [
+            ["we need to understand how processes that may seem immaterial in character function within, and even rearrange, the material conditions of pro­duction, distribution, communication, and circulation", "Boucher, Helmreich, Kinney, Tibbits, Uchill, and Ziporyn"],
+            ["the digital world has become more and more entan­gled with the physical realm rather than less and less", "Skylar Tibbits"],
+            ["Every programming language is a distinct material.","Ben Fry and Casey Reas"],
+            ["how do we harness the precision of machines without losing the creativity of individuals?","Nadya Peek"],
+            ["matter is not simply natural; it is not just given but also revealed and assembled by working on the world.","Benjamin Bratton"],
+            ["Together we are exploring the flaws and inaccuracies of algorithms, and what may happen if artificial intelligence gets it wrong","Christina Agapakis and Lucy McRae"],
+            ["rethink what tools and people belong in gendered spaces","Christina Agapakis and Lucy McRae"],
+            ["The media give us a disembodied experience of looking at events through a screen. It removes us from brutality by censoring and prefabricating the reports that we are supposed to interpret as reality.","Michelle Tolini Finamore, quoting Hussein Chalayan"],
+            ["I seek to make social alienation visible by exploring relations between bodies and architecture /space and in relation to nomadism and migration.","Azra Akšamija"],
+            ["How do computers see? What values are necessary for a computer to recognize a face? Do computers see all faces alike and ascribe the same values to what they see?","Hyphen-Labs"],
+            ["A crucial element of the development of science and technology is for it to be transparent and accessible to the fringes of culture—to everybody.","Lucy McRae"],
+            ["all media must be understood in terms of the supports that permit them to operate and circulate, all the way down to the elemental composition of satellite dishes, electric grids, and physical data centers that house ‘the cloud’","Rebecca Uchill and Stefan Helmreich"],
+            ["Sometimes, despite how much money a corporation has or how many politicians have accepted favors or hearty friendships with lobbyists, the project should not go ahead, in the interests of the public.","Winona LaDuke"],
+            ["When we began planning the ‘Being Material’ symposium, none of us could anticipate its unfolding in the dramatic context of an urgent, nationwide call to support art, science and the humanities.","Leila W. Kinney, preface"],
+            ["In the texts and artifacts gathered here, we offer an account of how the digital and the material are together brokering new scientific, physical, social, and political forms.","Boucher, Helmreich, Kinney, Tibbits, Uchill, and Ziporyn"],
+            ["The masses of carbon-dense exoskeletons and endoskeletons accumulating under pressure over geological time furnish the fuels we can’t seem to stop burning.","Claire Pentecost"],
+            ["money itself—what we think of as money—is generally one part of a collection of infrastructures for the transfer of value","Bill Maurer"],
+            ["most images are made by machines for other machines","Trevor Paglen"],
+            ["If the infrastructural involves the process of organizing and operating a sociotechnical system that is distributed across territory and sustained over time as well as ways of thinking about that system, then the animal is inherently part of this process.","Lisa Parks"],
+            ["if material things often bear traces of their conditions of production and circulation that are invisible to the unaided eye (as carbon footprints, as toxic waste, as chemical residue) how might this demand new ways of seeing the environments around us, and of reckoning with our responsibilities for them?","Rebecca Uchill and Stefan Helmreich"],
+            ["To confront a life in commodified, objectified, and stereotyped form is simultaneously to expose the cruelty and absurdity of the sociological processes that would allow for such a human-to-thing transformation, and to resacralize that human life by way of the disconnection that such a revelation lays bare between one’s lived experience and one’s effigy. It is to be a narrator.","Sandy Alexandre"],
+            ["Formaldehyde protects home construction materials from insect, bacteria, and fungal decay while also hastening the decay of human inhabitants.","Nicholas Shapiro"],
+            ["‘eyes,’ in the age of new kinds of optical and photographic mediation, fresh sorts of computational imagining, and novel projects in physical cloaking, are ever-changing material things and networks","George Barbastathis"],
+            ["It can be argued that every person living today who engages with music is also engaged with teasing out what is material from what is not.","Evan Ziporyn"],
+          ];
+          var r = Math.floor(Math.random() * 23);
+          $(".quotes").html("&ldquo;" + quotes[r][0] + "&rdquo;");
+          $(".byline").html("— " + quotes[r][1]);
+        }
 
         
     });

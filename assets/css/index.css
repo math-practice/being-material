@@ -655,9 +655,11 @@ article {
   line-height: 28px;
   text-indent: -0.3em;
 }
-.quotes .byline {
+
+.byline {
   text-indent: 0em;
   font-size: 16px;
+  line-height: 28px;
 }
 
 .inline-links {
