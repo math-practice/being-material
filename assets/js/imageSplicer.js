@@ -142,7 +142,7 @@ Site.interval = setInterval(function(){
 
 }, 50)
 
-Site.renderLeft = function(ctx, img, sliceAmount, yPosition, canvas){
+Site.renderLeft = function(ctx, img, sliceAmount, yPosition, canvas, horiziontalSplicing){
 	/* left column image rendering: */
 	
 	if (img === "clear"){
@@ -173,15 +173,27 @@ Site.renderLeft = function(ctx, img, sliceAmount, yPosition, canvas){
 			height: canvas.height
 		}
 
-		// ctx.drawImage(
-		// 	slice.img, 
-		// 	slice.sx , slice.sy, 
-		// 	slice.swidth, slice.sheight,
-		// 	slice.x, slice.y, 
-		// 	slice.width, slice.height
-		// );
+		if(horiziontalSplicing === true){
+			ctx.drawImage(
+				slice.img, 
+				slice.sx , slice.sy, 
+				slice.swidth, slice.sheight,
+				slice.x, 0, 
+				slice.width, slice.height
+			);
 
-		Site.fragmented(ctx, slice, true);
+			ctx.drawImage(
+				slice.img, 
+				slice.sx - 20 , slice.sy, 
+				slice.swidth, slice.sheight,
+				slice.x - 20, -10, 
+				slice.width, slice.height
+			);
+
+		}else{
+			Site.fragmented(ctx, slice, true);
+		}
+		
 
 	}
 }
@@ -442,13 +454,22 @@ Site.updateFields = function(coverClassificationResults){
 					console.log("\nCanvas reset\n\n");
 					var glbCtx = Site.globalCanvas.getContext("2d");
 
-					glbCtx.drawImage(
-						Images[Site.currentRegion].img,
-						0, 0, 
-						Site.globalCanvas.width, Site.globalCanvas.height
-					);
+					// option 1:
+					// draw full current image and then a drag immediatly on top
+					// glbCtx.drawImage(
+					// 	Images[Site.currentRegion].img,
+					// 	0, 0, 
+					// 	Site.globalCanvas.width, Site.globalCanvas.height
+					// );
+					// Site.renderLeft(glbCtx, Images[Site.currentRegion].img, 70, 0, Site.globalCanvas);
+					// render but without horiziontal splicing
+					Site.renderLeft(glbCtx, Images[Site.currentRegion].img, 70, 0, Site.globalCanvas, true);
 
-					Site.renderLeft(glbCtx, Images[Site.currentRegion].img, 70, 0, Site.globalCanvas);
+					// site.renderLeft but only with clearing
+					// Site.renderRight(glbCtx, "clear", 70, 0, Site.globalCanvas);
+
+
+
 					Site.clearingDrawing = false;
 				}, 9000)
 			}
