@@ -13,7 +13,8 @@ Text:
 <i>Magnetom</i> 
 </p>
 <p class="col-2">
-Live recording by Arnold Drebylatt
+Recorded live on March 22, 2017 at The Kitchen, New York
+(c) Arnold Dreyblatt 2017, Registered GEMA
 </p>
 </figcaption>
 
