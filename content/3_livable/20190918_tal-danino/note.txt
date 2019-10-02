@@ -4,7 +4,7 @@ Title: Tal Danino
 
 Text:
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-1.mp4">
 </video>
 <figcaption>
@@ -17,7 +17,7 @@ Illuminated bacteria time-lapse video, 1920 x 1080
 </figcaption>
 
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-2.mp4">
 </video>
 <figcaption>
@@ -30,7 +30,7 @@ Illuminated bacteria time-lapse video, 1920 x 1080
 </figcaption>
 
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-3.mp4">
 </video>
 <figcaption>
@@ -43,7 +43,7 @@ Illuminated bacteria time-lapse video, 1920 x 1080
 </figcaption>
 
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-4.mp4">
 </video>
 <figcaption>
@@ -55,7 +55,7 @@ Illuminated bacteria time-lapse video, 1920 x 1080
 </p>
 </figcaption>
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Livable/3-2%20Danino/Danino_online_materials_3-2-5.mp4">
 </video>
 <figcaption>

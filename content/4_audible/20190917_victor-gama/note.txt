@@ -4,7 +4,7 @@ Title: Victor Gama
 
 Text:
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Audible/5-5%20Gama/Gama_online_materials_5-5-1.mp4">
 </video>
 

@@ -4,7 +4,7 @@ Title: Nadya Peek
 
 Text:
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Programmable/1-5%20Peek/Peek_online_materials_.1-5-1.mp4">
 </video>
 

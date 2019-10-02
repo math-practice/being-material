@@ -4,7 +4,7 @@ Title: Hussein Chalayan
 
 Text:
 
-<video class="video-embed" controls playsinline autoplay>
+<video class="video-embed" preload="none" controls playsinline autoplay>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-9%20Chalayan/Chalayan_online_materials_2-9-1.mp4">
 </video>
 <figcaption>
@@ -18,7 +18,7 @@ Courtesy of Hussein Chalayan.
 
 
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-9%20Chalayan/Chalayan_online_materials_2-9-2.mp4">
 </video>
 <figcaption>
@@ -31,7 +31,7 @@ Courtesy of Hussein Chalayan.
 </figcaption>
 
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-9%20Chalayan/Chalayan_online_materials_2-9-3.mp4">
 </video>
 <figcaption>
@@ -44,7 +44,7 @@ Courtesy of Hussein Chalayan.
 </figcaption>
 
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-9%20Chalayan/Chalayan_online_materials_2-9-4.mp4">
 </video>
 <figcaption>
@@ -57,7 +57,7 @@ Courtesy of Hussein Chalayan.
 </figcaption>
 
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-9%20Chalayan/Chalayan_online_materials_2-9-5.mp4">
 </video>
 <figcaption>
@@ -70,7 +70,7 @@ Courtesy of Hussein Chalayan.
 </figcaption>
 
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-9%20Chalayan/Chalayan_online_materials_2-9-6.mp4">
 </video>
 <figcaption>
@@ -83,7 +83,7 @@ Courtesy of Hussein Chalayan.
 </figcaption>
 
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-9%20Chalayan/Chalayan_online_materials_2-9-7.mp4">
 </video>
 <figcaption>
@@ -96,7 +96,7 @@ Courtesy of Hussein Chalayan.
 </figcaption>
 
 
-<video class="video-embed" controls playsinline>
+<video class="video-embed" preload="none" controls playsinline>
 <source src="https://libraries.mit.edu/app/dissemination/DIPonline/AC0612/BEINGMATERIAL/Wearable/2-9%20Chalayan/Chalayan_online_materials_2-9-8.mp4">
 </video>
 <figcaption>
