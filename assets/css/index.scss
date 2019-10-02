@@ -250,8 +250,11 @@
 
     .intro {
       padding: $p-m 0;
-      min-height:500px;
+      min-height:600px;
       display: flex;
+      @include desktop {
+        min-height:600px;
+      }
     }
 
 
@@ -526,8 +529,14 @@
   article {
     margin-top: 128px;
   }
-  p.quotes {
-    margin-left: 2em !important;
+  .quotes {
+    font-size: 24px;
+    line-height: 28px;
+    text-indent: -0.3em;
+    .byline {
+      text-indent: 0em;
+      font-size: 16px;
+    }
   }
   /*media*/
 
